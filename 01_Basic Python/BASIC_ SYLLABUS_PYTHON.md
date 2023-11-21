@@ -14,7 +14,7 @@
 
 ### What is python
 
-1) Python is a programming language created py Guido Van Russum in 1991.<br>
+1) Python is a programming language created py Guido Van Rossum in 1991.<br>
 2) It is a simple, general-purpose, dynamically typed, high-level programming language.<br>
-3) It is an interpreted language ehich supports multiple paradigms i.e., functional approach, practical approach, modular 
+3) It is an interpreted language that supports multiple paradigms i.e., functional approach, practical approach, modular 
 approach, object-oriented approach.<br>
