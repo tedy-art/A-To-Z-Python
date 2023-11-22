@@ -16,7 +16,7 @@ def send_mail(to_email, subject, message):
     smtp_server = 'smtp.gmail.com' # smtp server address
     smtp_port = 587 # smtp port address
     smtp_username = 'tejasf4@gmail.com' # email address
-    smtp_password = 'dskp fjkk smml guvy' # app password
+    smtp_password = 'add-your-app password' # app password
 
     # create the email message
     # MIMEMultipart is used to create a multipart message
