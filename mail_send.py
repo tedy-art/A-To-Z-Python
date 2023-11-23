@@ -16,7 +16,7 @@ def send_mail(to_email, subject, message):
     smtp_server = 'smtp.gmail.com' # smtp server address
     smtp_port = 587 # smtp port address
     smtp_username = 'tejasf4@gmail.com' # email address
-    smtp_password = 'enter your app password' # app password
+    smtp_password = 'add-your-app password' # app password
 
     # create the email message
     # MIMEMultipart is used to create a multipart message
@@ -39,8 +39,7 @@ def send_mail(to_email, subject, message):
 def extract_email_from_pdf(pdf_path):
     # get "pdf_path" from main()
     with open(pdf_path, 'rb') as file:
-        # PdfReader -->we can do operation extracting text, merging or splitting pages,
-        # and more
+        # PdfReader -->we can do operation extracting text, merging or splitting pages and more
         pdf_reader = PyPDF2.PdfReader(file)
         text = ''
         for page in pdf_reader.pages:
