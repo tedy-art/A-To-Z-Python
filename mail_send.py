@@ -39,7 +39,8 @@ def send_mail(to_email, subject, message):
 def extract_email_from_pdf(pdf_path):
     # get "pdf_path" from main()
     with open(pdf_path, 'rb') as file:
-        # PdfReader -->we can do operation extracting text, merging or splitting pages and more
+        # PdfReader -->we can do operation extracting text, merging or splitting pages,
+        # and more
         pdf_reader = PyPDF2.PdfReader(file)
         text = ''
         for page in pdf_reader.pages:
