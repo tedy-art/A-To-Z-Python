@@ -4,7 +4,7 @@
 |-------------------------------------------|-------------------------------------------------------------------------------------------------|
 | What is Python?                           | Overview of Python and its applications                                                         |
 | Variables, Data Types and type conversion | Understanding variables, numbers, strings, and booleans , Implicit and Explicit type conversion |
-| Operators                                 | Arithmetic, comparison, logical, and assignment operators                                       |
+| Operators                                 | Arithmetic, comparison, logical, membership, identity and assignment operators                  |
 | Control Flow                              | Conditional statements (if, elif, else), loops (for, while)                                     |
 | Data Structures                           | Lists, tuples, dictionaries, sets                                                               |
 | Functions                                 | Defining and using functions                                                                    |
@@ -109,7 +109,7 @@ _the process of converting the value of one data type (int, string, float etc.) 
 - _Implicit Type Conversion_
 - _Explicit Type Conversion_
 
-1) Implicit Type Conversion
+#### 1) Implicit Type Conversion
 - In implicit type conversion, python automatically converts one data type to another data type.
 Ex.
     
@@ -127,3 +127,266 @@ Output
 
 | In this context, there are two variables, number_integer and number_float. When these two variables are added, the result is a float to prevent any potential data loss due to the inclusion of decimal values. |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
+#### 2) Explicit Type conversion
+In Explicit type conversion user converts the data type of object to a required data type.
+
+we use predefined function like int(), float(), str() etc., to perform explicit type conversion.
+
+Ex.
+    
+    float_num = 1.734
+    
+    # manually Converting to integer
+    integer_num = int(float_num)
+
+    print(f"float to integer number : {integer_num}.")
+    print(f"data type of interger_num { type(integer_num)}.")
+
+Output : 
+
+    float to integer number : 1
+    data type of integer_num <class 'int'>
+
+conversions of one data type to another 
+
+| conversions | details                                                                                                                                                                  |
+|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| int - float | we can convert integer values to floating values without data loss.                                                                                                      |
+| float - int | Converting floating-point values to integers is feasible; however, it comes with a caveat — the risk of data loss.                                                       |
+| str - int   | While it is possible to convert string values to integers, errors may occur, especially when the variable contains a combination of alphabetical characters and symbols. |
+| int - str   | we can convert int to string                                                                                                                                             |
+| float - str | we can convert float to string                                                                                                                                           |
+
+# Operators
+Operators are special symbols in python that carry out educational or logical computation.
+The value that the operator operates on is called operand.
+
+
+| Operator Type	 | Description                               | 	Example                         |
+|----------------|-------------------------------------------|----------------------------------|
+| Arithmetic	    | Perform mathematical operations           | 	+, -, *, /, //, %, **           |
+| Comparison	    | Compare values                            | 	==, !=, <, >, <=, >=            |
+| Logical	       | Perform logical operations                | 	and, or, not                    |
+| Membership	    | Test if a value is a member of a sequence | 	in, not in                      |                
+| Identity       | 	Compare object identities                | 	is, is not                      |
+| Assignment     | 	Assign values to variables               | 	=, +=, -=, *=, /=, //=, %=, **= |
+
+
+
+### Arithmetic operators:
+
+1. **Addition (`+`):** Adds two operands.
+   ```python
+   result = 10 + 5  # result is 15
+   ```
+
+2. **Subtraction (`-`):** Subtracts the right operand from the left operand.
+   ```python
+   result = 10 - 5  # result is 5
+   ```
+
+3. **Multiplication (`*`):** Multiplies two operands.
+   ```python
+   result = 10 * 5  # result is 50
+   ```
+
+4. **Division (`/`):** Divides the left operand by the right operand (always returns a float).
+   ```python
+   result = 10 / 5  # result is 2.0
+   ```
+
+5. **Floor Division (`//`):** Divides the left operand by the right operand and returns the floor value (rounded down to the nearest integer).
+   ```python
+   result = 10 // 3  # result is 3
+   ```
+
+6. **Modulus (`%`):** Returns the remainder of the division of the left operand by the right operand.
+   ```python
+   result = 10 % 3  # result is 1
+   ```
+
+7. **Exponentiation (`**`):** Raises the left operand to the power of the right operand.
+   ```python
+   result = 2 ** 3  # result is 8
+   ```
+
+### Comparison operators:
+
+1. **Equal to (`==`):** Checks if two values are equal.
+   ```python
+   5 == 5  # True
+   ```
+
+2. **Not equal to (`!=`):** Checks if two values are not equal.
+   ```python
+   5 != 10  # True
+   ```
+
+3. **Less than (`<`):** Checks if the left value is less than the right value.
+   ```python
+   5 < 10  # True
+   ```
+
+4. **Greater than (`>`):** Checks if the left value is greater than the right value.
+   ```python
+   10 > 5  # True
+   ```
+
+5. **Less than or equal to (`<=`):** Checks if the left value is less than or equal to the right value.
+   ```python
+   5 <= 5  # True
+   ```
+
+6. **Greater than or equal to (`>=`):** Checks if the left value is greater than or equal to the right value.
+   ```python
+   10 >= 5  # True
+   ```
+
+Examples:
+
+```python
+x = 10
+y = 20
+
+print(x == y)   # False
+print(x != y)   # True
+print(x < y)    # True
+print(x > y)    # False
+print(x <= y)   # True
+print(x >= y)   # False
+```
+
+### Logical operators :
+In Python are used to perform logical operations on Boolean values. They help combine multiple conditions and evaluate the overall truth value. Here are the main logical operators in Python:
+
+| Operator | Description                      | Example                      |
+|----------|----------------------------------|------------------------------|
+| `and`    | Logical AND                      | `x and y`                    |
+| `or`     | Logical OR                       | `x or y`                     |
+| `not`    | Logical NOT                      | `not x`                      |
+
+Here's a brief explanation of each logical operator:
+
+- **Logical AND (`and`):** Returns `True` if both operands are true, otherwise `False`.
+  ```python
+  x = True
+  y = False
+  result = x and y  # result is False
+  ```
+
+- **Logical OR (`or`):** Returns `True` if at least one operand is true, otherwise `False`.
+  ```python
+  x = True
+  y = False
+  result = x or y   # result is True
+  ```
+
+- **Logical NOT (`not`):** Returns `True` if the operand is false and vice versa.
+  ```python
+  x = True
+  result = not x    # result is False
+  ```
+  
+### Membership operators
+In Python are used to test whether a value is a member of a sequence, such as a string, list, tuple, or set. There are two membership operators: `in` and `not in`. Here's a brief explanation of each:
+
+1. **`in` Operator:**
+   - Returns `True` if a value exists in the sequence.
+   - Returns `False` if the value is not found in the sequence.
+
+   Example:
+   ```python
+   my_list = [1, 2, 3, 4, 5]
+   
+   print(3 in my_list)  # True
+   print(6 in my_list)  # False
+   ```
+
+2. **`not in` Operator:**
+   - Returns `True` if a value does not exist in the sequence.
+   - Returns `False` if the value is found in the sequence.
+
+   Example:
+   ```python
+   my_tuple = ('apple', 'banana', 'orange')
+   
+   print('grape' not in my_tuple)  # True
+   print('banana' not in my_tuple) # False
+   ```
+   
+
+### Identity operators:
+In Python are used to compare the memory locations of two objects. They determine whether two variables refer to the same object in memory. There are two identity operators in Python: `is` and `is not`.
+
+Here's a brief explanation of each identity operator:
+
+| Operator | Description                                    | Example                |
+|----------|------------------------------------------------|------------------------|
+| `is`     | True if the operands reference the same object | `a is b`               |
+| `is not` | True if the operands do not reference the same object | `a is not b`          |
+
+Examples:
+
+```python
+x = [1, 2, 3]
+y = [1, 2, 3]
+z = x
+
+print(x is y)        # False, because x and y are different objects
+print(x is z)        # True, because x and z reference the same object
+print(x is not y)    # True, because x and y are different objects
+print(x is not z)    # False, because x and z reference the same object
+```
+
+### Assignment operators :
+Assignment operators in Python are used to assign values to variables. They allow you to perform an operation and assign the result to a variable in a concise way. Here are the common assignment operators in Python.
+
+1. **Assignment (`=`):** Assigns the value of the right operand to the left operand.
+   ```python
+   x = 5  # Assigns the value 5 to the variable x
+   ```
+
+2. **Addition Assignment (`+=`):** Adds the right operand to the left operand and assigns the result to the left operand.
+   ```python
+   y = 10
+   y += 5  # Equivalent to y = y + 5
+   ```
+
+3. **Subtraction Assignment (`-=`):** Subtracts the right operand from the left operand and assigns the result to the left operand.
+   ```python
+   z = 15
+   z -= 3  # Equivalent to z = z - 3
+   ```
+
+4. **Multiplication Assignment (`*=`):** Multiplies the left operand by the right operand and assigns the result to the left operand.
+   ```python
+   a = 2
+   a *= 4  # Equivalent to a = a * 4
+   ```
+
+5. **Division Assignment (`/=`):** Divides the left operand by the right operand and assigns the result to the left operand.
+   ```python
+   b = 10
+   b /= 2  # Equivalent to b = b / 2
+   ```
+
+6. **Floor Division Assignment (`//=`):** Performs floor division on the left operand by the right operand and assigns the result to the left operand.
+   ```python
+   c = 10
+   c //= 3  # Equivalent to c = c // 3
+   ```
+
+7. **Modulus Assignment (`%=`):** Calculates the modulus of the left operand divided by the right operand and assigns the result to the left operand.
+   ```python
+   d = 7
+   d %= 4  # Equivalent to d = d % 4
+   ```
+
+8. **Exponentiation Assignment (`**=`):** Raises the left operand to the power of the right operand and assigns the result to the left operand.
+   ```python
+   e = 2
+   e **= 3  # Equivalent to e = e ** 3
+   ```
+
+# Control Flow
