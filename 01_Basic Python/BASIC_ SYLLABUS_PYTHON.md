@@ -401,3 +401,102 @@ result to the left operand.
    ```
 
 # Control Flow:
+#### 1. if__elif__else statement
+#### 2. while loops
+#### 3. for loops
+
+
+| 1. if statement  |
+|------------------|
+Python supports the usual logical conditions from mathematics : 
+- Equal : `a == b`
+- Not Equal : `a != b`
+- Less than : `a < b`
+- Less than and equal to : `a <= b`
+- Greater than : `a > b`
+- Greater than and equal to : `a >= b`
+
+These conditions can be used in several ways, most commonly in "if statements" and loop.
+An "if statement" is written by using the if keyword
+Ex
+```python
+a = 33
+b = 200
+if b > a:
+    print(f"{b} is greater than {a}.")
+```
+output
+```python
+'200 is greater than 33'
+```
+| 1.2 Elif Statement |
+|--------------------|
+The elif keyword is Python's way of saying "if the previous conditions were not true, then try this condition".
+
+Example
+```python
+a = 33
+b = 33
+if b > a:
+  print("b is greater than a")
+elif a == b:
+  print("a and b are equal")
+```
+Output:
+```output
+   a and b are equal
+```
+
+| 1.3 Else Statement |
+|--------------------|
+The else keyword catches anything which isn't caught by the preceding conditions.
+
+Example
+```python
+a = 200
+b = 33
+if b > a:
+  print("b is greater than a")
+elif a == b:
+  print("a and b are equal")
+else:
+  print("a is greater than b")
+```
+Output:
+```output
+   a is greater than b
+```
+
+| 2. while loops |
+|----------------|
+Python while loop is used to execute a block of statements repeatedly until a given condition is satisfied.
+
+Syntax:
+```python
+while condition:
+    # body of while loop
+```
+ex.
+```python
+i = 1
+n = 5
+
+while i <= n:
+    print(i)
+    i = i + 1
+```
+output:
+```output
+1
+2
+3
+4
+5
+```
+Ex.
+```python
+
+```
+
+| 3. for loops |
+|--------------|
