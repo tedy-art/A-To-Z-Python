@@ -41,7 +41,7 @@ A variable in programming is used to store data.
 #### Good name for a variable:<br>
     number, salary, name, first_name, last_name, email, number1 .... more<br>
 
-### Data Types :-
+## Data Types :-
 ###### In python, data types are categorized into two main groups
 ###### 1) primitive Data Types (Basic data types)
 ###### 2) Non-primitive Data types (complex data types)
@@ -69,20 +69,20 @@ There are more complex data types and are derived from primitiv data types.
 | 4) | Dictionary Data types | Unordered collection of key-value pairs.                                                                        | my_dict = {'name': 'John', 'age': 25} |
 | 5) | String Data type      | Strings, while primitive, can also be considered non-primitive when they are treated as sequences of characters | x = "This is String"                  |
 
-# First python program :
-
-    print("Hello, World!")
-
+### First python program :
+```python
+print("Hello, World!")
+```
 #### Output :
     
     'Hello, World!'
 
 #### Ex.
-
+```python
     name = "Jack"
     age = 22
     print(f"His name is {name} and he is {age} years old.")
-
+```
 #### Output
 
     His name is Jack and he is 22 years old.
@@ -92,10 +92,10 @@ There are more complex data types and are derived from primitiv data types.
 To take input from the user and store it in a variable, use input() function.
 
 Ex.
-
-    name = input ("Enter your name : ")
-    print(f" Hello, { name }!")
-
+```python
+name = input ("Enter your name : ")
+print(f" Hello, { name }!")
+```
 Output
     
     Enter your name : Tejas
