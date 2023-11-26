@@ -163,14 +163,14 @@ Operators are special symbols in python that carry out educational or logical co
 The value that the operator operates on is called operand.
 
 
-| Operator Type	 | Description                               | 	Example                         |
-|----------------|-------------------------------------------|----------------------------------|
-| Arithmetic	    | Perform mathematical operations           | 	+, -, *, /, //, %, **           |
-| Comparison	    | Compare values                            | 	==, !=, <, >, <=, >=            |
-| Logical	       | Perform logical operations                | 	and, or, not                    |
-| Membership	    | Test if a value is a member of a sequence | 	in, not in                      |                
-| Identity       | 	Compare object identities                | 	is, is not                      |
-| Assignment     | 	Assign values to variables               | 	=, +=, -=, *=, /=, //=, %=, **= |
+| sr | Operator Type	 | Description                               | 	Example                         |
+|----|----------------|-------------------------------------------|----------------------------------|
+| 1) | Arithmetic	    | Perform mathematical operations           | 	+, -, *, /, //, %, **           |
+| 2) | Comparison	    | Compare values                            | 	==, !=, <, >, <=, >=            |
+| 3) | Logical	       | Perform logical operations                | 	and, or, not                    |
+| 4) | Membership	    | Test if a value is a member of a sequence | 	in, not in                      |
+| 5) | Identity       | 	Compare object identities                | 	is, is not                      |
+| 6) | Assignment     | 	Assign values to variables               | 	=, +=, -=, *=, /=, //=, %=, **= |
 
 
 
@@ -196,7 +196,8 @@ The value that the operator operates on is called operand.
    result = 10 / 5  # result is 2.0
    ```
 
-5. **Floor Division (`//`):** Divides the left operand by the right operand and returns the floor value (rounded down to the nearest integer).
+5. **Floor Division (`//`):** Divides the left operand by the right operand and returns the floor value 
+6. (rounded down to the nearest integer).
    ```python
    result = 10 // 3  # result is 3
    ```
@@ -258,7 +259,8 @@ print(x >= y)   # False
 ```
 
 ### Logical operators :
-In Python are used to perform logical operations on Boolean values. They help combine multiple conditions and evaluate the overall truth value. Here are the main logical operators in Python:
+In Python are used to perform logical operations on Boolean values. They help combine multiple conditions and evaluate
+the overall truth value. Here are the main logical operators in Python:
 
 | Operator | Description                      | Example                      |
 |----------|----------------------------------|------------------------------|
@@ -289,7 +291,8 @@ Here's a brief explanation of each logical operator:
   ```
   
 ### Membership operators
-In Python are used to test whether a value is a member of a sequence, such as a string, list, tuple, or set. There are two membership operators: `in` and `not in`. Here's a brief explanation of each:
+In Python are used to test whether a value is a member of a sequence, such as a string, list, tuple, or set. 
+There are two membership operators: `in` and `not in`. Here's a brief explanation of each:
 
 1. **`in` Operator:**
    - Returns `True` if a value exists in the sequence.
@@ -317,14 +320,15 @@ In Python are used to test whether a value is a member of a sequence, such as a 
    
 
 ### Identity operators:
-In Python are used to compare the memory locations of two objects. They determine whether two variables refer to the same object in memory. There are two identity operators in Python: `is` and `is not`.
+In Python are used to compare the memory locations of two objects. They determine whether two variables refer to the 
+same object in memory. There are two identity operators in Python: `is` and `is not`.
 
 Here's a brief explanation of each identity operator:
 
-| Operator | Description                                    | Example                |
-|----------|------------------------------------------------|------------------------|
-| `is`     | True if the operands reference the same object | `a is b`               |
-| `is not` | True if the operands do not reference the same object | `a is not b`          |
+| Operator | Description                                           | Example      |
+|----------|-------------------------------------------------------|--------------|
+| `is`     | True if the operands reference the same object        | `a is b`     |
+| `is not` | True if the operands do not reference the same object | `a is not b` |
 
 Examples:
 
@@ -340,11 +344,12 @@ print(x is not z)    # False, because x and z reference the same object
 ```
 
 ### Assignment operators :
-Assignment operators in Python are used to assign values to variables. They allow you to perform an operation and assign the result to a variable in a concise way. Here are the common assignment operators in Python.
+Assignment operators in Python are used to assign values to variables. They allow you to perform an operation and 
+assign the result to a variable in a concise way. Here are the common assignment operators in Python.
 
 1. **Assignment (`=`):** Assigns the value of the right operand to the left operand.
    ```python
-   x = 5  # Assigns the value 5 to the variable x
+   x = 5  # Assigns value 5 to the variable x
    ```
 
 2. **Addition Assignment (`+=`):** Adds the right operand to the left operand and assigns the result to the left operand.
@@ -353,40 +358,46 @@ Assignment operators in Python are used to assign values to variables. They allo
    y += 5  # Equivalent to y = y + 5
    ```
 
-3. **Subtraction Assignment (`-=`):** Subtracts the right operand from the left operand and assigns the result to the left operand.
+3. **Subtraction Assignment (`-=`):** Subtracts the right operand from the left operand and assigns the result 
+to the left operand.
    ```python
    z = 15
    z -= 3  # Equivalent to z = z - 3
    ```
 
-4. **Multiplication Assignment (`*=`):** Multiplies the left operand by the right operand and assigns the result to the left operand.
+4. **Multiplication Assignment (`*=`):** Multiplies the left operand by the right operand and assigns the result to 
+the left operand.
    ```python
    a = 2
    a *= 4  # Equivalent to a = a * 4
    ```
 
-5. **Division Assignment (`/=`):** Divides the left operand by the right operand and assigns the result to the left operand.
+5. **Division Assignment (`/=`):** Divides the left operand by the right operand and assigns the result to 
+the left operand.
    ```python
    b = 10
    b /= 2  # Equivalent to b = b / 2
    ```
 
-6. **Floor Division Assignment (`//=`):** Performs floor division on the left operand by the right operand and assigns the result to the left operand.
+6. **Floor Division Assignment (`//=`):** Performs floor division on the left operand by the right operand and 
+assigns the result to the left operand.
    ```python
    c = 10
    c //= 3  # Equivalent to c = c // 3
    ```
 
-7. **Modulus Assignment (`%=`):** Calculates the modulus of the left operand divided by the right operand and assigns the result to the left operand.
+7. **Modulus Assignment (`%=`):** Calculates the modulus of the left operand divided by the right operand and assigns
+the result to the left operand.
    ```python
    d = 7
    d %= 4  # Equivalent to d = d % 4
    ```
 
-8. **Exponentiation Assignment (`**=`):** Raises the left operand to the power of the right operand and assigns the result to the left operand.
+8. **Exponentiation Assignment (`**=`):** Raises the left operand to the power of the right operand and assigns the
+result to the left operand.
    ```python
    e = 2
    e **= 3  # Equivalent to e = e ** 3
    ```
 
-# Control Flow
+# Control Flow:
