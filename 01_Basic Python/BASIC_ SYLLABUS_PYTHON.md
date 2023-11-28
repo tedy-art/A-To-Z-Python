@@ -493,10 +493,126 @@ output:
 4
 5
 ```
-Ex.
-```python
+#### The `break` Statement
+with the `break` statement we can stop the loop even if the while condition is true.
 
+Ex. 
+```python
+i = 1
+while i < 6:
+    print(i)
+    if i == 3:
+        break
+    i += 1
+```
+output :
+```python
+1
+2
+3
+```
+#### The `continue` Statement
+with the `continue` statement we can stop the current iteration, and continue with the next.
+
+Ex. Continues to the next iteration if i is 3:
+```python
+i = 0
+while i < 6:
+  i += 1
+  if i == 3:
+    continue
+  print(i)
+```
+Output:
+```python
+1
+2
+4 # 3 is not display
+5
+6
+```
+#### The `else` Statement
+with the `else` statement we can run a block of code once when the condition no longer is true:
+Example:
+```python
+i = 1
+while i < 6:
+    print(i)
+    i += 1
+else:
+    print("i is no longer less than 6")
 ```
 
 | 3. for loops |
 |--------------|
+A for loop is used to iterating over a sequence (list, tuple, dictionary, set or string).
+Ex. 
+```python
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)
+```
+Output:
+```output
+apple
+banana
+cherry
+```
+#### Looping Through a String
+Even strings are iterable objects, they contain a sequence of characters:
+
+Example
+
+Loop through the letters in the word "banana":
+```python
+for x in "banana":
+  print(x)
+```
+Output:
+```python
+b
+a
+n
+a
+n
+a
+```
+| Note:<br/> In `for` loop, we can use operations like break, continue statement like we used in `while` loop |
+|-------------------------------------------------------------------------------------------------------------|
+
+#### The `range` function : 
+To loop through a set of code a specified number of times, we can use the `range()` function,
+
+Example :
+
+Using the `range()` function:
+
+```python
+for x in range(6):
+  print(x)
+```
+Output:
+```python
+0
+1
+2
+3
+4
+5
+```
+
+| Note that range(6) is not the values of 0 to 6, but the values 0 to 5. |
+|------------------------------------------------------------------------|
+
+
+syntax
+```python
+range(start, stop, step)
+```
+| sr | operations | description               | Example                                    | output                   |
+|----|------------|---------------------------|--------------------------------------------|--------------------------|
+| 1) | Start      | start our iteration from  | for i in range(2):</br></t>print(i)        | 0</br>1                  |
+| 2) | Stop       | stop our iteration        | for i in range(2, 6):</br></t>print(i)     | 2</br>3</br>4</br>5</br> |
+| 3) | Step       | step over specific values | for i in range(2, 10, 3):</br></t>print(i) | 2</br>5</br>8            |
+
+#  Data Structures
