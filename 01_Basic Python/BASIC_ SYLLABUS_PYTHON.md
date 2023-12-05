@@ -29,10 +29,11 @@ It is used in:<br>
 ## variables:<br>
 A variable in programming is used to store data.
 
-    ex.
+ex.
+```python
         a = 10
         b = 1.1
-
+```
 #### Rule for naming a variable:<br>
     1) a to z OR A to Z OR 0 to 9 OR _(underscore).<br>
     2) you can't start a variable name with a digit.<br>
@@ -74,9 +75,9 @@ There are more complex data types and are derived from primitiv data types.
 print("Hello, World!")
 ```
 #### Output :
-    
+```python    
     'Hello, World!'
-
+```
 #### Ex.
 ```python
     name = "Jack"
@@ -84,9 +85,9 @@ print("Hello, World!")
     print(f"His name is {name} and he is {age} years old.")
 ```
 #### Output
-
+```python
     His name is Jack and he is 22 years old.
-
+```
 | <h3> ** Take input from user **</h3> |
 |--------------------------------------|
 To take input from the user and store it in a variable, use input() function.
@@ -97,10 +98,10 @@ name = input ("Enter your name : ")
 print(f" Hello, { name }!")
 ```
 Output
-    
+```python    
     Enter your name : Tejas
     'Hello, Tejas!'
-
+```
 ## Python Types conversion
 _In programming, it's common to convert integer to float, float to string and so more,_
 _the process of converting the value of one data type (int, string, float etc.) to another data type is called type conversion._
@@ -113,17 +114,18 @@ _the process of converting the value of one data type (int, string, float etc.) 
 - In implicit type conversion, python automatically converts one data type to another data type.
 Ex.
     
-    
+```python
     number_integer = 123
     number_float = 1.23
     
     # addition of int and float
     sum = number_integer + number_float
     print(sum)
-
+```
 Output
-
+```python
     124.23
+```
 
 | In this context, there are two variables, number_integer and number_float. When these two variables are added, the result is a float to prevent any potential data loss due to the inclusion of decimal values. |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -134,7 +136,7 @@ In Explicit type conversion user converts the data type of object to a required 
 we use predefined function like int(), float(), str() etc., to perform explicit type conversion.
 
 Ex.
-    
+```python
     float_num = 1.734
     
     # manually Converting to integer
@@ -142,12 +144,13 @@ Ex.
 
     print(f"float to integer number : {integer_num}.")
     print(f"data type of interger_num { type(integer_num)}.")
+```    
 
 Output : 
-
+```python
     float to integer number : 1
     data type of integer_num <class 'int'>
-
+```
 conversions of one data type to another 
 
 | conversions | details                                                                                                                                                                  |
@@ -616,3 +619,7 @@ range(start, stop, step)
 | 3) | Step       | step over specific values | for i in range(2, 10, 3):</br></t>print(i) | 2</br>5</br>8            |
 
 #  Data Structures
+1) list
+2) Tuple
+3) Dict
+4) Set
