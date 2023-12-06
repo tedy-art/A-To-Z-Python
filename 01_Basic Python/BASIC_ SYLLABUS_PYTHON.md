@@ -969,4 +969,70 @@ Output
 1
 2
 ```
-### while loop in list
+### while loop in a list
+```python
+thislist = ["apple", "banana", "cherry"]
+i = 0
+while i < len(thislist):
+  print(thislist[i])
+  i = i + 1
+```
+output
+```python
+apple
+banana
+cherry
+```
+### list comprehension 
+1) list comprehension offers a shorter syntax when you want to create a new list based on the values of an existing list.
+```python
+# simple for list with if condition
+fruits = ["apple","banana","cherry"]
+newlist = []
+
+for x in fruits:
+    if "a" in x:
+        newlist.append(x)
+
+print(newlist)
+```
+Output
+```python
+['apple', 'banana', 'mango']
+```
+
+Ex.
+```python
+fruits = ['apple', 'banana', 'cherry', 'kiwi', 'mango']
+newlist = [x for x in fruits if "a" in x]
+print(newlist)
+```
+Output
+```python
+['apple', 'banana', 'mango']
+```
+
+| List comprehension syntax : <br/> newlist = [ expression for item in iterable id condition == True ] | 
+|------------------------------------------------------------------------------------------------------|
+
+2) Condition
+- The condition is like a filter that only accepts the items that valuate to `true`.
+```python
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = [x for x in fruits if x != "apple"]
+print(newlist)
+```
+Output
+```python
+['banana', 'cherry', 'kiwi', 'mango']
+```
+- with no `if` condition
+```python
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = [x for x in fruits]
+print(newlist)
+```
+Output:
+```python
+['apple', 'banana', 'cherry', 'kiwi', 'mango']
+```
