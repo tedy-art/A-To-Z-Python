@@ -764,3 +764,64 @@ Output
 Yes, 'apple' is in the fruits list.
 ```
 
+| Note : List is a mutable(Changeable) and also we can change items in list. |
+|----------------------------------------------------------------------------|
+
+### Change Item Values
+
+```python
+thislist = ["Apple","Banana","Cherry"]
+thislist[1] = "Blackcurrant"
+print(thislist)
+```
+Output
+```python
+['Apple','Blackcurrant','Cherry']
+```
+### Change a range of items values
+```python
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "mango"]
+thislist[1:3] = ['blackcurrant','watermelon']
+print(thislist)
+```
+Output
+```python
+['apple', 'blackcurrant', 'watermelon', 'orange', 'kiwi', 'melon', 'mango']
+```
+#### Change the second value by replacing it with two new values
+```python
+thislist = ['apple', 'banana', 'cherry']
+# add 2nd index `['blackcurrant', 'watermelon']` and add cherry at 3rd index
+thislist[1:2] = ['blackcurrant', 'watermelon']
+print(thislist)
+```
+Output:
+```python
+['apple', 'blackcurrant', 'watermelon', 'cherry']
+```
+
+#### Change the second and third value by replacing it with one value
+```python
+thislist = ["apple","banana","cherry"]
+thislist[1:3] = ["watermelon"]
+print(thislist)
+```
+Output
+```python
+['apple','watermelon']
+```
+
+### Insert Items
+- To insert a new item, without replacing any of the existing values, we can use the `insert()` method.
+
+```python
+thislist = ["apple","banana","cherry"]
+thislist.insert(2, "watermelon")
+print(thislist)
+```
+Output
+```python
+['apple', 'banana', 'watermelon', 'cherry']
+```
+
+### Add list items
