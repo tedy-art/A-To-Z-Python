@@ -623,3 +623,144 @@ range(start, stop, step)
 2) Tuple
 3) Dict
 4) Set
+
+### list
+1) list is a comma separated values with in the square brackets "[]".
+2) list is used to store multiple items in a single variable.
+3) list is ordered, mutable(changeable), duplicates allowed.
+
+ex. Create a list variable
+```python
+thislist = ['apple', 'banana', 'cherry']
+print(thislist)
+```
+Output:
+```output
+['apple', 'banana', 'cherry']
+```
+- we can do indexing with list like arrays and list index start with 0, 1, 2, 3...so on
+  - apple = [1]
+  - banana = [2]
+  - cherry = [3]
+  - ...
+  - ...
+
+- allow duplicates : 
+```python
+thislist = ['apple', 'banana', 'cherry', 'apple', 'banana']
+print(thislist)
+```
+Output:
+```output
+['apple', 'banana', 'cherry', 'apple', 'banana']
+```
+
+#### How `len()` work with a list??
+len()—how many items in a list
+
+```python
+thislist = ['apple', 'banana', 'cherry']
+print(len(thislist))
+```
+Output
+```output
+3
+```
+
+#### A list can contain different data types:
+```python
+thislist = ['apple', 2, True, 30, 'cherry']
+print(type(thislist))
+```
+Output
+```Output
+<class 'list'>
+```
+
+#### how `list()` works in python??
+```python
+thislist = list(("apple", "banana", "cherry"))
+print(thislist)
+```
+Output
+```output
+['apple', 'banana', 'cherry']
+```
+
+| Note: as we know, we can access list items with the help of indexing and slicling |
+|-----------------------------------------------------------------------------------|
+
+### Access items
+
+- access with indexing
+  - The first item has index 0.
+```python
+thislist = ['apple', 'banana', 'cherry']
+print(thislist[1])
+```
+Output
+```python
+banana
+```
+- negative indexing 
+  - negative indexing means start with an end.
+  - -1 refers to the _last item of the list_, then -2, -3, ... so on.
+
+```python
+thistlist = ['apple', 'banana', 'cherry']
+print(thistlist[-1])
+```
+Output:
+```python
+cherry
+```
+
+#### Range of an indexing or slicing list
+```python
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[2:5]) # slicing start with 2 but end with 4 (5 is )
+```
+output
+```python
+['cherry','orange','kiwi']
+```
+
+```python
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[:4]) # start from index[0] to index[3]
+```
+Output
+```python
+['apple','banana','cherry','orange']
+```
+
+```python
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[2:]) # start from 2 to last item
+```
+Output:
+```python
+['cherry','orenge','kiwi','melon','mango']
+```
+
+#### Range of negative index or negative slicing
+```python
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[-4:-1])
+```
+output
+```python
+['orange','kiwi','melon']
+```
+
+#### Check if Item Exists
+```python
+thislist = ['apple','banana','cherry']
+if "apple" in thislist:
+    print("Yes, 'apple' is in the fruits list.")
+```
+Output
+```python
+Yes, 'apple' is in the fruits list.
+```
+
