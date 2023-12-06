@@ -825,3 +825,148 @@ Output
 ```
 
 ### Add list items
+1) `append()` :
+```python
+thislist = ["apple","banana","cherry"]
+thislist.append("orange")
+print(thislist)
+```
+Output
+```python
+['apple', 'banana', 'cherry', 'orange']
+```
+
+2) `insert()` :
+```python
+thislist = ["apple", "banana", "cherry"]
+thislist.insert(1, "orange")
+print(thislist)
+```
+output
+```python
+['apple', 'orange', 'banana', 'cherry']
+```
+
+3) `extend()` :
+```python
+thislist = ["apple","banana","cherry"]
+tropical = ["mango","pineapple","papaya"]
+thislist.extend(tropical) # 'tropical' list added to end of the 'thislist' list
+print(thislist)
+```
+Output
+```python
+['apple', 'banana', 'cherry', 'mango', 'pineapple', 'papaya']
+```
+
+Add any iterable :
+```python
+thislist = ["apple", "banana", "cherry"]
+thistuple = ("kiwi", "orange")
+thislist.extend(thistuple)
+print(thislist)
+```
+Output
+```python
+['apple', 'banana', 'cherry', 'kiwi', 'orange']
+```
+
+### Remove list items
+1) `remove()` :
+```python
+thislist = ['apple', 'banana', 'cherry']
+thislist.remove('banana')
+print(thislist)
+```
+Output
+```python
+['apple','cherry']
+```
+| Note : If there are more than one item with the specified value, the remove() method removes the first occurrence |
+|-------------------------------------------------------------------------------------------------------------------|
+
+```python
+thislist = ["apple", "banana", "cherry", "banana", "kiwi"]
+thislist.remove("banana")
+print(thislist)
+```
+Output :
+```python
+['apple', 'cherry', 'banana', 'kiwi']
+```
+
+2) `pop()` - remove specified index </br>
+Ex.
+```python
+thislist = ['apple','banana','cherry']
+thislist.pop(1)
+print(thislist)
+```
+Output
+```python
+['apple','cherry']
+```
+Ex.
+```python
+thislist = ['apple','banana','cherry']
+thislist.pop()
+print(thislist)
+```
+Output
+```python
+['apple','banana']
+```
+3) `del` : This `del` keyword also removes the specified index.
+```python
+thislist = ["apple", "banana", "cherry"]
+del thislist[0]
+print(thislist)
+```
+output
+```python
+['banana','cherry']
+```
+
+4) `del` : delete list
+```python
+thislist = ["apple", "banana", "cherry"]
+del thislist
+```
+
+5) `clear()` : empty the list
+```python
+thislist = ["apple","banana","cherry"]
+thislist.clear()
+print(thislist)
+```
+Output
+```python
+[]
+```
+
+### for loop in a list
+1) loop through a list: 
+```python
+thislist = ["apple", "banana", "cherry"]
+for x in thislist:
+    print(x)
+```
+Output: 
+```python
+apple
+banana
+cherry
+```
+2) `range()` with `len()`
+```python
+thislist = ["apple", "banana", "cherry"]
+for i in range(len(thislist)):
+    print(i)
+```
+Output
+```python
+0
+1
+2
+```
+### while loop in list
