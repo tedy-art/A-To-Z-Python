@@ -1036,3 +1036,228 @@ Output:
 ```python
 ['apple', 'banana', 'cherry', 'kiwi', 'mango']
 ```
+
+3) Iterable
+```python
+newlist = [x for x in range(10)]
+```
+Output:
+```
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+- Iterable with conditions
+```python
+newlist = [x for x in range(10) if x > 5]
+print(newlist)
+```
+Output
+```
+[6, 7, 8, 9]
+```
+
+4) Expression
+- The expression is the current item in the iteration, but it is also the outcome, which you can manipulate before it ends up like a list item in the new list
+```python
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = [x.upper() for x in fruits]
+print(newlist)
+```
+Output
+```python
+['APPLE', 'BANANA', 'CHERRY', 'KIWI', 'MANGO']
+```
+Ex 2: You can set the outcome to whatever you like
+```python
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = ['hello' for x in fruits]
+print(newlist)
+```
+Output
+```python
+['hello', 'hello', 'hello', 'hello', 'hello']
+```
+
+Ex. 2: The expression can also contain conditions, not like a filter, but as a way to manipulate the outcome
+```python
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = [x if x != 'banana' else "orange" for x in fruits]
+print(newlist)
+```
+Output:
+```python
+['apple', 'orange', 'cherry', 'kiwi', 'mango']
+```
+
+### sort Lists
+1) Sort list alphanumerically(`sort()`) :
+- list objects have a `sort()` method that will sort the list alphanumerically, ascending, by default:
+```python
+fruits = ["orange" ,"mango", "kivi", "pineapple", "banana"]
+fruits.sort()
+print(fruits)
+```
+Output
+```python
+['banana', 'kivi', 'mango', 'orange', 'pineapple']
+```
+- With numeric values:
+```python
+thislist = [100, 50, 65, 82, 23]
+thislist.sort()
+print(thislist)
+```
+Output
+```python
+[23, 50, 65, 82, 100]
+```
+
+2) sort Descending(`sort(reverse = True)`) :
+```python
+thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+thislist.sort(reverse = True)
+print(thislist)
+```
+Output
+```python
+['pineapple', 'orange', 'mango', 'kiwi', 'banana']
+```
+3) Customize sort function :
+- You can also customize your own function by using the keyword argument `key = function`
+- The function will return a number that will be used to sort the list (the lowest number first):
+Ex.
+```python
+# Define a function that calculates the absolute difference from 50
+def myfunc(n):
+    return abs(n - 50)
+
+# Create a list of numbers
+thislist = [100, 50, 65, 82, 23]
+
+# Sort the list based on the absolute difference from 50
+thislist.sort(key=myfunc)
+
+# Print the sorted list
+print(thislist)
+```
+output
+```python
+[50, 65, 82, 23, 100]
+```
+Ex 2 :
+```python
+# Define a function that calculates the remainder when dividing a number by 3
+def remainder_mod3(n):
+    return n % 3
+
+# Create a list of numbers
+numbers = [10, 21, 14, 27, 36]
+
+# Sort the list based on the remainder when dividing each number by 3
+numbers.sort(key=remainder_mod3)
+
+# Print the sorted list
+print(numbers)
+```
+Output:
+```python
+[21, 27, 36, 10, 14]
+```
+
+4) case-insensitive sort : 
+- By default, the sort() method is a case sensitive, resulting in all capital letters being sorted before lower case letters
+```python
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+thislist.sort() # first capital letter and then lower latter
+print(thislist)
+```
+Output
+```python
+['Kiwi', 'Orange', 'banana', 'cherry'
+```
+- `str.lower`
+```python
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+thislist.sort(key=str.lower) # lower letters first and then capital letters
+print(thislist)
+```
+output
+```python
+['banana', 'cherry', 'Kiwi', 'Orange']
+```
+
+5) Reverse Order `reverse()` :
+```python
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+thislist.reverse() # reverse order of `thislist`
+print(thislist)
+```
+Output
+```python
+['cherry', 'Kiwi', 'Orange', 'banana']
+```
+
+### Copy List
+1) Copy a list
+- `copy()` :
+```python
+thislist = ["apple", "banana", "cherry"]
+mylist = thislist.copy()
+print(mylist)
+```
+Output
+```python
+['apple', 'banana', 'cherry']
+```
+
+- `list()` :
+```python
+thislist = ['apple', 'banana', 'cherry']
+mylist = list(thislist)
+print(mylist)
+```
+Output
+```python
+['apple', 'banana', 'cherry']
+```
+
+### Join List
+1) Join two lists with `+` :
+```python
+list1 = ["a", "b", "c"]
+list2 = [1, 2, 3]
+
+list3 = list1 + list2
+print(list3)
+```
+Output
+```python
+['a', 'b', 'c', 1, 2, 3]
+```
+2) join lists with `for` loop :
+```python
+list1 = ["a", "b", "c"]
+list2 = [1, 2, 3]
+
+for x in list2:
+    list1.append(x)
+
+print(list1)
+```
+Output
+```python
+['a', 'b', 'c', 1, 2, 3]
+```
+
+3) join lists with `extend()` :
+```python
+list1 = ['a', 'b', 'c']
+list2 = [1, 2, 3]
+
+list1.extend(list2)
+print(list1)
+```
+Output
+```python
+['a', 'b', 'c', 1, 2, 3]
+```
