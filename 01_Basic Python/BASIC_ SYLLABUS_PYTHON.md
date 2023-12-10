@@ -1266,6 +1266,8 @@ Output
 - A tuple is a comma separated values within the round bracket ().
 - Tuples are used to store multiple items in a single variable. 
 - a tuple is a collection that is ordered and unchangeable.
+- Tuple items are odreded, unchangeable, and allow duplicates.
+- Tuple items are indexed, the first item has index [0] and the second item index [1].
 
 
 #### How to create a tuple:
@@ -1273,6 +1275,69 @@ Output
 thistuple = ("apple","banana","cherry")
 print(thistuple)
 ```
+output
+```python
+('apple', 'banana', 'cherry')
+```
+
+#### Tuple lenght `len()`:
+
+```python
+thistuple = ("apple","banana","cherry")
+print(len(thistuple))
+```
+output:
+```python
+3
+```
+
+#### crete tuple with one item
+- To create a tuple with only one item, you have to add a comma after the item, otherwise Python will not recognize it as a tuple
+
+```python
+thistuple = ("apple",) # this is a tuple
+print(type(thistuple))
+
+thistuple = ("apple") # this is not a tuple
+print(type(thistuple))
+```
+Output
+```python
+<class 'tuple'>
+<class 'str'>
+```
+
+
+```python
+tuple1 = ("apple", "banana", "cherry")
+tuple2 = (1, 5, 7, 9, 3)
+tuple3 = (True, False, False)
+print(tuple1)
+print(tuple2)
+print(tuple3)
+```
+Output
+```python
+('apple', 'banana', 'cherry')
+(1, 5, 7, 9, 3)
+(True, False, False)
+```
+
+- A tuple can contain different data types:
+```python
+tuple1 = ("abc", 34, True, 40, "male")
+```
+Output
+```python
+('abc', 34, True, 40, 'male')
+```
+
+#### The `tuple()` Constructor:
+```python
+thistuple = tuple(("apple", "banana", "cherry")) # note the double round-brackets
+print(thistuple)
+```
+
 output
 ```python
 ('apple', 'banana', 'cherry')
