@@ -624,7 +624,7 @@ range(start, stop, step)
 3) Dict
 4) Set
 
-### list
+# list
 1) list is a comma separated values with in the square brackets "[]".
 2) list is used to store multiple items in a single variable.
 3) list is ordered, mutable(changeable), duplicates allowed.
@@ -1260,4 +1260,20 @@ print(list1)
 Output
 ```python
 ['a', 'b', 'c', 1, 2, 3]
+```
+
+# Tuple
+- A tuple is a comma separated values within the round bracket ().
+- Tuples are used to store multiple items in a single variable. 
+- a tuple is a collection that is ordered and unchangeable.
+
+
+#### How to create a tuple:
+```python
+thistuple = ("apple","banana","cherry")
+print(thistuple)
+```
+output
+```python
+('apple', 'banana', 'cherry')
 ```
