@@ -624,7 +624,7 @@ range(start, stop, step)
 3) Dict
 4) Set
 
-# list
+# list []
 1) list is a comma separated values with in the square brackets "[]".
 2) list is used to store multiple items in a single variable.
 3) list is ordered, mutable(changeable), duplicates allowed.
@@ -1262,11 +1262,11 @@ Output
 ['a', 'b', 'c', 1, 2, 3]
 ```
 
-# Tuple
+# Tuple ()
 - A tuple is a comma separated values within the round bracket ().
 - Tuples are used to store multiple items in a single variable. 
 - a tuple is a collection that is ordered and unchangeable.
-- Tuple items are odreded, unchangeable, and allow duplicates.
+- Tuple items are ordered, unchangeable, and allow duplicates.
 - Tuple items are indexed, the first item has index [0] and the second item index [1].
 
 
@@ -1291,7 +1291,7 @@ output:
 3
 ```
 
-#### crete tuple with one item
+#### create tuple with one item
 - To create a tuple with only one item, you have to add a comma after the item, otherwise Python will not recognize it as a tuple
 
 ```python
@@ -1342,3 +1342,278 @@ output
 ```python
 ('apple', 'banana', 'cherry')
 ```
+
+#### Access Tuple Items
+
+```python
+tuple1 = ("apple", "banana", "cherry")
+print(tuple1[1])
+```
+Output:
+```python
+'banana'
+```
+
+#### Negative Indexing
+```python
+thistuple = ("apple", "banana", "cherry")
+print(thistuple[-1])
+```
+Output
+```python
+'cherry'
+```
+
+#### Range of Indexes/ Slicing
+```python
+thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
+print(thistuple[2:5])
+```
+Output
+```python
+('cherry', 'orange', 'kiwi')
+```
+| Note: The search will start at index 2 (included) and end at index 5 (not included). |
+|--------------------------------------------------------------------------------------|
+
+Ex_2
+```python
+thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
+print(thistuple[:4])
+```
+Output
+```python
+('apple', 'banana', 'cherry', 'orange')
+```
+
+```python
+thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
+print(thistuple[2:])
+```
+Output
+```python
+('cherry', 'orange', 'kiwi', 'melon', 'mango')
+```
+
+#### Range of Negative slicing /Indexes
+```python
+thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
+print(thistuple[-4:-1])
+```
+output
+```python
+('orange', 'kiwi', 'melon')
+```
+#### Check if Item Exists
+```python
+thistuple = ("apple", "banana", "cherry")
+if "apple" in thistuple:
+  print("Yes, 'apple' is in the fruits tuple")
+```
+Output
+```python
+Yes, 'apple' is in the fruits tuple
+```
+
+### Update tuple
+#### Change Tuple Values
+- Once a tuple is created, you cannot change its values. Tuples are unchangeable, or immutable
+
+```python
+x = ('apple', 'banana', 'cherry')
+y = list(x)
+y[1] = "kiwi"
+x = tuple(y)
+
+print(x)
+```
+Output
+```python
+('apple', 'kiwi', 'cherry')
+```
+
+#### add items— 
+Since tuples are immutable, they do not have a built-in append() method,
+but there are other ways to add items to a tuple.
+
+1. Convert into a list:— Just like the workaround for changing a tuple, you can convert it into a list, add your item(s),
+   and convert it back into a tuple.
+
+`append()`
+```python
+thistuple = ("apple", "banana", "Cherry")
+thislist = list(thistuple)
+thislist.append("Orange")
+thistuple = tuple(thislist)
+print(thistuple)
+```
+Output:
+```python
+('apple', 'banana', 'cherry', 'Orange')
+```
+2. Add tuple to a tuple. You are allowed to add tuples to tuples, so if you want to add one item, (or many), 
+    create a new tuple with the item(s), and add it to the existing tuple:
+```python
+thistuple = ('apple', 'banana', 'cherry')
+y = ('orange',) # remember ","(comma) is important for 1 item tuple
+thistuple += y
+
+print(thistuple)
+```
+Output:
+```python
+('apple', 'banana', 'cherry', 'Orange')
+```
+#### Remove Items—
+| Note: You cannot remove items in a tuple. |
+|-------------------------------------------|
+
+```python
+thistuple = ("apple", "banana", "cherry")
+y = list(thistuple)
+y.remove("apple")
+thistuple = tuple(y)
+```
+Ouput:
+```python
+('banana', 'cherry')
+```
+- `del` keyword:
+```python
+thistuple = ("apple", "banana", "cherry")
+del thistuple
+print(thistuple)  # this will raise an error because the tuple no longer exists
+```
+Output
+```python
+Traceback (most recent call last):
+  File "E:\Start Python\A-To-Z-Python\01_Basic Python\02 Data Types\02 Tuple\011_del_keyword.py", line 3, in <module>
+    print(thistuple) #this will raise an error because the tuple no longer exists
+          ^^^^^^^^^
+NameError: name 'thistuple' is not define
+```
+### Packing and Unpacking a Tuple
+#### packing tuple:
+```python
+fruits = ("apple", "banana", "cherry") # packing tuple
+```
+
+- in Python, we are also allowed to extract the values back into variables. This is called "unpacking":
+```python
+fruits = ("apple", "banana", "cherry")
+
+(green, yellow, red) = fruits  # unpacking items from tuple
+
+print(green)
+print(yellow)
+print(red)
+```
+Output:
+```python
+apple
+banana
+cherry
+```
+
+Using Asterisk `*`:
+```python
+fruits = ("apple", "banana", "cherry", "strawberry", "raspberry")
+
+(green, yellow, *red) = fruits
+
+print(green)
+print(yellow)
+print(red)
+```
+Output:
+```python
+apple
+banana
+['cherry', 'strawberry', 'raspberry']
+```
+
+Ex_2:
+```python
+fruits = ("apple", "mango", "papaya", "pineapple", "cherry")
+
+(green, *tropic, red) = fruits
+
+print(green)
+print(tropic)
+print(red)
+```
+Output:
+```python
+apple
+['mango', 'papaya', 'pineapple']
+cherry
+```
+
+### loops in tuple
+#### for loop:
+```python
+thistuple = ("apple", "banana", "cherry")
+for x in thistuple:
+  print(x)
+```
+Output
+```python
+apple
+banana
+cherry
+```
+#### Loop Through the Index Numbers
+- using `len()` and `range()`:
+```python
+thistuple = ("apple", "banana", "cherry")
+for i in range(len(thistuple)):
+  print(thistuple[i])
+```
+Output:
+```python
+apple
+banana
+cherry
+```
+
+#### Using a While Loop
+```python
+thistuple = ("apple", "banana", "cherry")
+i = 0
+while i < len(thistuple):
+  print(thistuple[i])
+  i = i + 1
+```
+Output:
+```python
+apple
+banana
+cherry
+```
+### Join Tuple:
+1) Join Two Tuples `+`:
+```python
+tuple1 = ("a", "b" , "c")
+tuple2 = (1, 2, 3)
+
+tuple3 = tuple1 + tuple2
+print(tuple3)
+```
+Output:
+```python
+('a', 'b', 'c', 1, 2, 3)
+```
+
+2) Multiply Tuples `*`:
+```python
+fruits = ("apple", "banana", "cherry")
+mytuple = fruits * 2
+
+print(mytuple)
+```
+Output:
+```python
+('apple', 'banana', 'cherry', 'apple', 'banana', 'cherry')
+```
+
+# set {}:
