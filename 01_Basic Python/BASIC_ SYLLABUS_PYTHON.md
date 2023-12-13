@@ -694,6 +694,19 @@ Output
 
 - access with indexing
   - The first item has index 0.
+
+| +ve index | 0       | 1        | 2        |
+|-----------|---------|----------|----------|
+| items     | 'apple' | 'banana' | 'cherry' |
+| -ve index | -3      | -2       | -1       |
+
+access 2 index
+
+| +ve index | 0  | 1  | 2  | 3  | 4  | 5  |
+|-----------|----|----|----|----|----|----|
+| items     | c  | h  | e  | r  | r  | y  |
+| -ve index | -6 | -5 | -4 | -3 | -2 | -1 |
+
 ```python
 thislist = ['apple', 'banana', 'cherry']
 print(thislist[1])
