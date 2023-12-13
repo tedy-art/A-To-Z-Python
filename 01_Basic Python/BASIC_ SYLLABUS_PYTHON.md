@@ -1630,3 +1630,250 @@ Output:
 ```
 
 # set {}:
+- sets are used to store multiple items in a single variable.
+- duplicates are not allowed in a set.
+- A set is a collection which is unordered, unchangeable*, and unindexed. 
+- set items are unchangeable, but you can remove items and add new items.
+- sets are written with curly brackets`{}`.
+
+```python
+thisset = {"apple", "banana", "cherry"}
+print(thisset)
+```
+output:
+```python
+{'banana', 'apple', 'cherry'}
+```
+
+#### Duplicates are not allowed
+```python
+thisset = {"apple", "banana", "cherry", "apple"}
+print(thisset)
+```
+Output
+```python
+{'cherry', 'banana', 'apple'}
+```
+
+#### True and 1 is considered the same value:
+| Note : The values False and 0 are considered the same value in sets, and are treated as duplicates: |
+|-----------------------------------------------------------------------------------------------------|
+```python
+thisset = {"apple", "banana", "cherry", True, 1, 2}
+print(thisset)
+```
+Output
+```python
+{True, 2, 'apple', 'banana', 'cherry'}
+```
+
+#### `len()` :
+```python
+thisset = {"apple", "banana", "cherry"}
+print(len(thisset))
+```
+output:
+```python
+3
+```
+
+#### The `set()` Constructor :
+```python
+thisset = set(("apple", "banana", "cherry")) # note the double round-brackets
+print(thisset)
+```
+Output:
+```python
+{'banana', 'apple', 'cherry'}
+```
+
+### Access Set Items
+#### for loop
+```python
+thisset = {"apple", "banana", "cherry"}
+
+for x in thisset:
+  print(x)
+```
+Output:
+```python
+cherry
+apple
+banana
+```
+
+#### `in` keyword:
+```python
+thisset = {"apple", "banana", "cherry"}
+print("banana" in thisset)
+```
+Output
+```python
+True
+```
+| Note : Once a set is created, you cannot change its items, but you can add new items. |
+|---------------------------------------------------------------------------------------|
+
+### Add items:
+#### `add()`:
+```python
+thisset = {"apple", "banana", "cherry"}
+thisset.add("orange")
+print(thisset)
+```
+output
+```python
+{'banana', 'orange', 'cherry', 'apple'}
+```
+
+### add sets
+#### add two a sets to each other by using `update()` :
+```python
+thisset = {"apple", "banana", "cherry"}
+tropical = {"pineapple", "mango", "papaya"}
+thisset.update(tropical)
+print(thisset)
+```
+output:
+```python
+{'papaya', 'cherry', 'mango', 'pineapple', 'apple', 'banana'}
+```
+
+#### Add Any Iterable
+```python
+thisset = {"apple", "banana", "cherry"}
+mylist = ["kiwi", "orange"]
+thisset.update(mylist)
+print(thisset)
+```
+Output:
+```python
+{'banana', 'cherry', 'apple', 'orange', 'kiwi'}
+```
+
+### Remove Set Items
+#### `remove()` method:
+```python
+thisset = {"apple", "banana", "cherry"}
+thisset.remove("banana")
+print(thisset)
+```
+Output:
+```python
+{'apple', 'cherry'}
+```
+
+| Note: If the item to remove does not exist, remove() will raise an error. |
+|---------------------------------------------------------------------------|
+
+#### `discard()` method:
+```python
+thisset = {'apple', 'banana', 'cherry'}
+thisset.discard("banana")
+print(thisset)
+```
+output
+```python
+{'apple', 'cherry'}
+```
+
+| Note: If the item to remove does not exist, discard() will NOT raise an error. |
+|--------------------------------------------------------------------------------|
+
+#### `pop()` method:
+```python
+thisset = {"apple", "banana", "cherry"}
+x = thisset.pop()
+print(x)
+print(thisset)
+```
+Output
+```python
+banana
+{'apple', 'cherry'}
+```
+
+#### `clear()` method:
+```python
+thisset = {'apple', 'banana', 'cherry'}
+thisset.clear()
+print(thisset)
+```
+Output:
+```python
+set()
+```
+
+#### `del` keyword:
+```python
+thisset = {"apple", "banana", "cherry"}
+del thisset
+print(thisset)
+```
+Output:
+```python
+"E:\Start Python\venv\Scripts\python.exe" "E:\Start Python\A-To-Z-Python\01_Basic Python\02 Data Types\03 Set\011_del.py" 
+Traceback (most recent call last):
+  File "E:\Start Python\A-To-Z-Python\01_Basic Python\02 Data Types\03 Set\011_del.py", line 3, in <module>
+    print(thisset)
+          ^^^^^^^
+NameError: name 'thisset' is not defined
+```
+
+### Join sets:
+#### Join two sets
+1. **Union (`union` method or `|` operator):**
+   ```python
+   set1 = {1, 2, 3}
+   set2 = {3, 4, 5}
+   union_result = set1.union(set2)  # or use set1 | set2
+   print("Union Result:", union_result) # Union Result: {1, 2, 3, 4, 5}
+   ```
+    
+2. **Intersection (`intersection` method or `&` operator):**
+   ```python
+   set1 = {1, 2, 3}
+   set2 = {3, 4, 5}
+   intersection_result = set1.intersection(set2)  # or use set1 & set2
+   print("Intersection Result:", intersection_result) # Intersection Result: {3}
+   ```
+
+3. **Difference (`difference` method or `-` operator):**
+   ```python
+   set1 = {1, 2, 3}
+   set2 = {3, 4, 5}
+   difference_result = set1.difference(set2)  # or use set1 - set2
+   print("Difference Result:", difference_result) # Difference Result: {1, 2}
+   ```
+
+4. **Symmetric Difference (`symmetric_difference` method or `^` operator):**
+   ```python
+   set1 = {1, 2, 3}
+   set2 = {3, 4, 5}
+   symmetric_difference_result = set1.symmetric_difference(set2)  # or use set1 ^ set2
+   print("Symmetric Difference Result:", symmetric_difference_result) # Symmetric Difference Result: {1, 2, 4, 5}
+   ```
+
+5. **Subset (`issubset` method):**
+   ```python
+   set1 = {1, 2}
+   set2 = {1, 2, 3, 4}
+   is_subset = set1.issubset(set2)
+   print("Is Subset:", is_subset) # Is Subset: True
+   ```
+
+6. **Superset (`issuperset` method):**
+   ```python
+   set1 = {1, 2, 3, 4}
+   set2 = {1, 2}
+   is_superset = set1.issuperset(set2)
+   print("Is Superset:", is_superset) # Is Superset: True
+   ```
+
+7. **Disjoint Sets (`isdisjoint` method):**
+   ```python
+   set1 = {1, 2, 3}
+   set2 = {4, 5, 6}
+   is_disjoint = set1.isdisjoint(set2)
+   print("Are Sets Disjoint:", is_disjoint) # Are Sets Disjoint: True
+   ```
