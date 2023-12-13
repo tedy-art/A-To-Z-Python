@@ -1877,3 +1877,296 @@ NameError: name 'thisset' is not defined
    is_disjoint = set1.isdisjoint(set2)
    print("Are Sets Disjoint:", is_disjoint) # Are Sets Disjoint: True
    ```
+
+# Dictionary
+- Dictionaries are used to store data values in key:value pairs.
+- "Key" is "immutable"(unchangeable). 
+- "values" are "mutable"changeable).
+- A dictionary is a collection which is ordered*, changeable and does not allow duplicates.
+- of Python version 3.7, dictionaries are ordered. In Python 3.6 and earlier, dictionaries are unordered.
+- Dictionaries are written with curly brackets, and have keys and values.
+
+```python
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict)
+```
+Output:
+```python
+{'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
+```
+#### Dictionary Items
+```python
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict["brand"])
+```
+Output
+```python
+Ford
+```
+
+#### Duplicates Aren't Allowed
+- Dictionaries cannot have two items with the same key:
+```python
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964,
+  "year": 2020 # send year element will not include in dict
+}
+print(thisdict)
+```
+Output
+```python
+{'brand': 'Ford', 'model': 'Mustang', 'year': 2020}
+```
+
+#### Dictionary Length
+- `len()` function
+```python
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964,
+  "year": 2020
+}
+print(len(thisdict))
+```
+output:
+```python
+3
+```
+
+#### The `dict()` Constructor:
+```python
+thisdict = dict(name = "John", age = 36, country = "Norway")
+print(thisdict)
+```
+output:
+```python
+{'name': 'John', 'age': 36, 'country': 'Norway'}
+```
+
+### Access Dictionary Items
+#### Accessing Items
+- You can access the items of a dictionary by referring to its key name, inside square brackets:
+
+```python
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = thisdict["model"]
+print(x)
+```
+output
+```python
+Mustang
+```
+
+#### `get()` method:
+```python
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = thisdict.get("model")
+print(x)
+```
+output
+```python
+Mustang
+```
+
+#### Get Keys by `key()` method:
+```python
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = thisdict.keys()
+print(x)
+```
+output
+```python
+dict_keys(['brand', 'model', 'year'])
+```
+
+#### Get Items by `items()`:
+```python
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = thisdict.items()
+print(x)
+```
+output
+```python
+dict_items([('brand', 'Ford'), ('model', 'Mustang'), ('year', 1964)])
+```
+
+#### Check if Key Exists using `in`:
+```python
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+if "model" in thisdict:
+  print("Yes, 'model' is one of the keys in the thisdict dictionary.")
+```
+Output:
+```python
+Yes, 'model' is one of the keys in the thisdict dictionary.
+```
+
+### Change Dictionary Items
+#### Change Values:
+```python
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict)
+thisdict["year"] = 2018
+print(thisdict)
+```
+output:
+```python
+{'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
+{'brand': 'Ford', 'model': 'Mustang', 'year': 2018}
+```
+
+#### Update Dictionary using `update()`:
+```python
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict)
+thisdict.update({"year": 2020})
+print(thisdict)
+```
+
+```python
+{'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
+{'brand': 'Ford', 'model': 'Mustang', 'year': 2020}
+```
+
+### Add Dictionary Items
+```python
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict["color"] = "red"
+print(thisdict)
+```
+output
+```python
+{'brand': 'Ford', 'model': 'Mustang', 'year': 1964, 'color': 'red'}
+```
+
+#### Update Dictionary by `update()`:
+```python
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.update({"color": "red"})
+```
+output
+```python
+{'brand': 'Ford', 'model': 'Mustang', 'year': 1964, 'color': 'red'}
+```
+
+### Remove Dictionary Items
+#### Removing Items by `pop()`
+- There are several methods to remove items from a dictionary:
+```python
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.pop("model")
+print(thisdict)
+```
+output:
+```python
+{'brand': 'Ford', 'year': 1964}
+```
+
+#### `popitem()` method
+- The `popitem()` method removes the last inserted item:
+```python
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.popitem() # remove last item from dict
+print(thisdict)
+```
+output
+```python
+{'brand': 'Ford', 'model': 'Mustang'}
+```
+
+#### `del` keyword :
+The `del` keyword removes the item with the specified key name:
+```python
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+del thisdict["model"] # model is removed from dict
+print(thisdict)
+```
+output
+```python
+{'brand': 'Ford', 'year': 1964}
+```
+
+#### `del` entire dict
+```python
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+del thisdict
+print(thisdict) #this will cause an error because "thisdict" no longer exists.
+```
+
+#### `clear()` method
+```python
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.clear()
+print(thisdict)
+```
+output
+```python
+{}
+```
