@@ -2170,3 +2170,155 @@ output
 ```python
 {}
 ```
+
+
+### loop dictionary : 
+### for loop
+- When looping through a dictionary, the return value is the `keys` of the dictionary, 
+    but there are methods to return the `values` as well.
+
+#### 1) `keys` :-
+```python
+thisdict =	{
+  "brand": "HP",
+  "model": "pavilion 360",
+  "year": 2016
+}
+for i in thisdict:
+    print(i)
+```
+output
+```python
+brand
+model
+year
+```
+
+#### 1.1) `keys()`:
+```python
+thisdict =	{
+  "brand": "HP",
+  "model": "pavilion 360",
+  "year": 2016
+}
+for x in thisdict.keys():
+  print(x)
+```
+output
+```python
+brand
+model
+year
+```
+
+2) `values` :-
+```python
+thisdict =	{
+  "brand": "HP",
+  "model": "pavilion 360",
+  "year": 2016
+}
+for x in thisdict:
+  print(thisdict[x])
+```
+output:
+```python
+HP
+pavilion 360
+2016
+```
+
+#### `values()`:-
+```python
+thisdict =	{
+  "brand": "HP",
+  "model": "pavilion 360",
+  "year": 2016
+}
+for x in thisdict.values():
+  print(x)
+```
+output:
+```python
+HP
+pavilion 360
+2016
+```
+
+#### `item()` :-
+```python
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+for x, y in thisdict.items():
+  print(x, y)
+```
+Output
+```python
+brand Ford
+model Mustang
+year 1964
+```
+
+#### `copy()` :-
+```python
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+mydict = thisdict.copy()
+print(mydict)
+```
+output
+```python
+{'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
+```
+
+#### `dict()`:
+```python
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+mydict = dict(thisdict)
+print(mydict)
+```
+output:
+```python
+{'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
+```
+
+#### Nested Dict
+```python
+child1 = {
+  "name" : "Emil",
+  "year" : 2004
+}
+child2 = {
+  "name" : "Tobias",
+  "year" : 2007
+}
+child3 = {
+  "name" : "Linus",
+  "year" : 2011
+}
+
+myfamily = {
+  "child1" : child1,
+  "child2" : child2,
+  "child3" : child3
+}
+
+print(myfamily)
+print(myfamily["child2"]["name"])
+```
+output
+```python
+{'child1': {'name': 'Emil', 'year': 2004}, 'child2': {'name': 'Tobias', 'year': 2007}, 'child3': {'name': 'Linus', 'year': 2011}}
+Tobias
+```
+
