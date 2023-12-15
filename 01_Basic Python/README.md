@@ -2322,3 +2322,123 @@ NameError: name 'thisset' is not defined
    print("Are Sets Disjoint:", is_disjoint) # Are Sets Disjoint: True
    ```
 
+
+# Functions 
+- in Python,
+  - A function is a block of organized, reusable code that performs a specific task.
+  - it allows you to structure your code in a modular way, making it easier to read, understand and maintain.
+  - Function is defined using the `def` keyword, followed by the function name and set of parentheses containing parameters.
+
+**Function definition**
+- Function is defined by using `def` keyword, followed by its name and set of parentheses containing parameters.
+
+syntax
+```python
+def name_of_function(paramter1, parameter2, parameter3, ...):
+    # function body
+```
+**Function Call**
+- Functions are called or invoked by using the 
+```python
+name_of_function(parameter1, parameter2, ....)
+```
+
+**return statement**
+- Functions can use `return` statement to send a result back to the caller.
+
+```python
+def add_number(a, b):
+    return a + b
+```
+
+**Parameters and arguments**
+- Paremeter are variables in a function defination.
+- Arguments are values passed into a function when it is called.
+
+```python
+def greet(name):
+    print("Hello, "+name+"!")
+greet("Alice")
+```
+Output:
+```python
+Hello, Alice!
+```
+**Default Values**
+- function parameter can have default values, which are used if the caller dose not provide value for that parameter.
+```python
+def greet(name="Guest"):
+    print("Hello, "+name+"!")
+greet()
+greet("Alice")
+```
+Output
+```python
+Hello, Guest!
+Hello, Alice!
+```
+
+**Scope**
+- The Scope in Python refers to the region of a program where a particular identifier (like a variable or function)  is recognized or accessible.
+- Python has the following types of scope:
+    - **1) Local Scope**
+       - variable defined inside a function is local to that function(_have function scope_).
+
+    - **2) global Scope**
+       - variable defined outside function is global(_have global scope_).
+
+#### local variable
+```python
+def my_function():
+    local_variable = 5
+    print(local_variable)
+my_function()
+print(local_variable) # error : as local_variable is not defined outside function.
+```
+#### Global Variable
+```python
+global_variable = 20
+
+def my_function():
+    print(global_variable)
+
+my_function()
+```
+**Docstrings**
+- It's good practice to include a docstring (triple-quoted string) at the beginning of a function to describe its purpose, parameters, and return values.
+```python
+def add(a, b):
+    """
+    Adds two numbers.
+
+    Parameters:
+    - a: First number
+    - b: Second number
+
+    Returns:
+    Sum of a and b
+    """
+    return a + b
+```
+
+**Lambda Function**
+- Lambda functions, also known as anonymous functions, are concise one-line created using the `lambda` keyword.
+```python
+square = lambda x:x ** 2
+result = square(5)
+print(result)
+```
+output
+```python
+25
+```
+
+**Recursion**
+- Function can call themsalves, allowing for recursive behavior.
+```python
+def factorial(n):
+    if n == 0 or n == 1
+        return 1
+    else:
+        return n * factorial(n-1)
+```
