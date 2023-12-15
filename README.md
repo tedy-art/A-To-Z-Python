@@ -24,19 +24,7 @@
 | Generators and Iterators          | Writing memory-efficient code                              |
 | Regular Expressions               | Pattern matching using regular expressions                 |
 
-### 3. Advanced Python
-
-| Topic              | Description                                               |
-|--------------------|-----------------------------------------------------------|
-| Advanced OOP       | Design patterns, abstract classes, multiple inheritance   |
-| Concurrency        | Threading, multiprocessing, asynchronous programming      |
-| Database Access    | Working with databases using Python (e.g., SQLite, MySQL) |
-| Web Development    | Introduction to web frameworks (e.g., Flask, Django)      |
-| Testing            | Unit testing, test-driven development (TDD)               |
-| Advanced Topics    | Metaclasses, context managers, decorators with arguments  |
-| External Libraries | Exploring popular libraries (e.g., NumPy, Pandas)         |
-
-### 4. Data Structure
+### 3. Data Structure
 | Topic                           | Subtopics and Concepts                                   |
 |---------------------------------|----------------------------------------------------------|
 | Introduction to Data Structures | Definition, importance, and characteristics              |
@@ -48,3 +36,15 @@
 | Heaps                           | Binary heaps, heap operations, heap sort                 |
 | Hash Tables                     | Hashing techniques, collision resolution, applications   |
 | Graphs                          | Basic concepts, representations, traversal algorithms    |
+
+### 4. Advanced Python
+
+| Topic              | Description                                               |
+|--------------------|-----------------------------------------------------------|
+| Advanced OOP       | Design patterns, abstract classes, multiple inheritance   |
+| Concurrency        | Threading, multiprocessing, asynchronous programming      |
+| Database Access    | Working with databases using Python (e.g., SQLite, MySQL) |
+| Web Development    | Introduction to web frameworks (e.g., Flask, Django)      |
+| Testing            | Unit testing, test-driven development (TDD)               |
+| Advanced Topics    | Metaclasses, context managers, decorators with arguments  |
+| External Libraries | Exploring popular libraries (e.g., NumPy, Pandas)         |
