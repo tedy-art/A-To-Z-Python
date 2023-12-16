@@ -13,14 +13,46 @@
 
 # Object-Oriented Programming(OOP):
 1) Basic of OOP
-2) classes
+2) class
 3) objects
 4) encapsulation
 5) abstraction
 6) inheritance
 7) polymorphism
 
-1) Basic of OOP:
+**1) Basic of OOP:**
 - Object-oriented programming is a programming paradigm that uses objects to structure code.
 - In python, everything is an object, and the language supports OOP principle.
-- Here are the basic concepts of object-oriented programming in python :
+
+**2) class :**
+- a class is a blueprint for creating objects.
+- it defines a data structure(attributes) and methods to manipulate that data.
+
+**3) objects :**
+- An object is an instance of a class. 
+- it represents a real-world entity and has its own state and behavior.
+- objects are created based on the structure defined by the class.
+
+```python
+class Dog:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    
+    def bark(self):
+        print("woof!")
+
+# creating an object of the Dog class
+my_dog = Dog(name="Buddy", age=3)
+
+# Accessing attributes and calling methods
+print(my_dog.name)
+my_dog.bark()
+```
+Output
+```python
+Buddy
+woof!
+```
+
+**4) Encapsulation**
