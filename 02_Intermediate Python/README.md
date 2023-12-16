@@ -50,7 +50,7 @@ print(my_dog.name)
 my_dog.bark()
 ```
 Output
-```python
+```
 Buddy
 woof!
 ```
