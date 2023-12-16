@@ -2448,3 +2448,52 @@ output
 120
 ```
 
+# Input and Output:
+In Python, 
+- you can read input from the user and print output to the console using the `input()` and `print()` functions, respectively. 
+- Here's an overview of how to use these functions:
+
+### Reading Input:
+
+- To read input from the user, you can use the `input()` function. 
+- It takes an optional prompt as an argument, which is displayed to the user. 
+- The entered input is returned as a string.
+
+```python
+# Reading input from the user
+user_input = input("Enter something: ")
+print("You entered:", user_input)
+```
+
+— Keep in mind that the input is always treated as a string. 
+- If you want to convert it to a different type (e.g., integer or float), you need to use type conversion functions like `int()` or `float()`.
+
+```python
+# Reading an integer from the user
+user_number = int(input("Enter an integer: "))
+print("You entered:", user_number)
+```
+
+### Printing Output:
+
+- To display output to the console, 
+  - you can use the `print()` function. It can take multiple arguments, separated by commas, and prints them to the console.
+
+```python
+# Printing output
+print("Hello, World!")
+
+# Printing multiple values
+name = "Alice"
+age = 30
+print("Name:", name, "Age:", age)
+```
+
+You can use formatted strings (f-strings) to include variables or expressions within the string.
+
+```python
+# Using f-strings for formatted output
+name = "Bob"
+age = 25
+print(f"Name: {name}, Age: {age}")
+```
