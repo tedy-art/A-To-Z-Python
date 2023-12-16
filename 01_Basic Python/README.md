@@ -2434,11 +2434,17 @@ output
 ```
 
 **Recursion**
-- Function can call themsalves, allowing for recursive behavior.
+- Functions can call themselves, allowing for recursive behavior.
 ```python
 def factorial(n):
-    if n == 0 or n == 1
+    if n == 0 or n == 1:
         return 1
     else:
         return n * factorial(n-1)
+print(factorial(5))
 ```
+output
+```python
+120
+```
+
