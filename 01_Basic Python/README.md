@@ -2497,3 +2497,90 @@ name = "Bob"
 age = 25
 print(f"Name: {name}, Age: {age}")
 ```
+
+# Exception Handling
+### Handling errors with try-except blocks
+1. Exception handling in Python allows you to handle errors or unexpected situations in a controlled manner. 
+2. It involves the use of the `try`, `except`, `else`, and `finally` blocks. 
+3. The `try` block lets you test a block of code for errors.
+4. The `except` block lets you handle the error.
+5. The `else` block lets you execute code when there is no error.
+6. The `finally` block lets you execute code, regardless of the result of the try and except blocks.
+
+- Here's an overview of how exception handling works:
+
+### Basic Exception Handling:
+
+```python
+try:
+    # Code that may raise an exception
+    result = 10 / 0  # Division by zero to trigger an exception
+except Exception as e:
+    # Handle the exception
+    print(f"An error occurred: {e}")
+```
+
+- In the example above, 
+  - the `try` block contains the code that might raise an exception.
+  - If an exception occurs, the code in the `except` block is executed.
+  - The `as e` part captures the exception object, allowing you to inspect or print details about the exception.
+
+### Handling Specific Exceptions:
+
+You can handle specific types of exceptions by specifying multiple `except` blocks.
+
+```python
+try:
+    user_input = int(input("Enter a number: "))
+    result = 10 / user_input
+except ValueError:
+    print("Invalid input. Please enter a valid number.")
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
+```
+
+- In this example, 
+  - the `ValueError` is caught if the user enters something that is not an integer, and the `ZeroDivisionError` is caught if the user enters zero.
+
+### `else` and `finally` Blocks:
+
+- The `else` block is executed if no exceptions are raised in the `try` block.
+
+```python
+try:
+    user_input = int(input("Enter a number: "))
+    result = 10 / user_input
+except ValueError:
+    print("Invalid input. Please enter a valid number.")
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
+else:
+    print("No exceptions were raised. Result:", result)
+finally:
+    print("This block is always executed, regardless of exceptions.")
+```
+
+The `finally` block is always executed, whether an exception is raised or not. It is typically used for cleanup operations.
+
+### Raising Exceptions:
+
+You can use the `raise` statement to explicitly raise an exception.
+
+```python
+def divide(a, b):
+    if b == 0:
+        raise ValueError("Cannot divide by zero.")
+    return a / b
+
+try:
+    result = divide(10, 0)
+except ValueError as e:
+    print(f"Error: {e}")
+```
+
+- In this example, 
+  - the `divide` function raises a `ValueError` if the second argument is zero.
+
+- Exception handling is a crucial aspect of writing robust and fault-tolerant code.
+- It allows you to gracefully handle errors and prevent your program from crashing when unexpected situations occur.
+
