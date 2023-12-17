@@ -33,6 +33,7 @@
 - it represents a real-world entity and has its own state and behavior.
 - objects are created based on the structure defined by the class.
 
+Ex.
 ```python
 class Dog:
     def __init__(self, name, age):
@@ -56,3 +57,50 @@ woof!
 ```
 
 **4) Encapsulation**
+- Wrapping of data and methods together in one class is called Encapsulation.
+- you can hide the internal state of an object from outside.
+
+In python, encapsulation is achieved using access modifiers to control the visibility of attributes and methods.
+There are three levels of access:
+1) Public(default)
+2) Protected('_' prefix)
+3) Private('__' prefix)
+
+**1) Public access modifiers:**
+- Members are accessible from outside the class.
+
+Ex.
+```python
+class Myclass:
+    def __init__(self, attribute):
+        self.attribute = attribute
+    
+    def my_method(self):
+        return "This is a public method."
+
+
+# create a object
+obj = Myclass(attribute="example")
+print(obj.attribute) # access attribute
+print(obj.my_method()) # access method
+```
+
+**Protected(`_` prefix) :**
+- Members should not be accessed directly from outside the class but can be accessed in subclasses.
+- by convention, an attribute or method with a single landing underscore(`_`) is considered protected.
+- it signals that the attribute or method is intended for internal use within the class or its subclasses.
+
+Ex.
+```python
+class Myclass:
+    def __init__(self, _protected_attribute):
+        self._protected_attribute = _protected_attribute
+
+    def _protected_method(self):
+        return "This is a protected method"
+# Creating an object
+obj = Myclass(_protected_attribute="example")
+print(obj._protected_attribute)
+print(obj._protected_method())
+```
+**Accessing Protected Members Outside the Class:**
