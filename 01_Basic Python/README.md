@@ -71,6 +71,7 @@ There are more complex data types and are derived from primitiv data types.
 | 5) | String Data type      | Strings, while primitive, can also be considered non-primitive when they are treated as sequences of characters | x = "This is String"                  |
 
 ### First python program :
+ex.
 ```python
 print("Hello, World!")
 ```
@@ -112,8 +113,8 @@ _the process of converting the value of one data type (int, string, float etc.) 
 
 #### 1) Implicit Type Conversion
 - In implicit type conversion, python automatically converts one data type to another data type.
-Ex.
-    
+
+Ex. 
 ```python
     number_integer = 123
     number_float = 1.23
@@ -646,6 +647,8 @@ Output:
   - ...
 
 - allow duplicates : 
+
+Example
 ```python
 thislist = ['apple', 'banana', 'cherry', 'apple', 'banana']
 print(thislist)
@@ -658,6 +661,7 @@ Output:
 #### How `len()` work with a list??
 len()—how many items in a list
 
+Example
 ```python
 thislist = ['apple', 'banana', 'cherry']
 print(len(thislist))
@@ -668,6 +672,8 @@ Output
 ```
 
 #### A list can contain different data types:
+
+Example
 ```python
 thislist = ['apple', 2, True, 30, 'cherry']
 print(type(thislist))
@@ -678,6 +684,8 @@ Output
 ```
 
 #### how `list()` works in python??
+
+Example
 ```python
 thislist = list(("apple", "banana", "cherry"))
 print(thislist)
@@ -707,6 +715,7 @@ access 2 index
 | items     | c  | h  | e  | r  | r  | y  |
 | -ve index | -6 | -5 | -4 | -3 | -2 | -1 |
 
+Example
 ```python
 thislist = ['apple', 'banana', 'cherry']
 print(thislist[1])
@@ -719,6 +728,7 @@ banana
   - negative indexing means start with an end.
   - -1 refers to the _last item of the list_, then -2, -3, ... so on.
 
+Example
 ```python
 thistlist = ['apple', 'banana', 'cherry']
 print(thistlist[-1])
@@ -729,6 +739,8 @@ cherry
 ```
 
 #### Range of an indexing or slicing list
+
+Example
 ```python
 thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
 print(thislist[2:5]) # slicing start with 2 but end with 4 (5 is )
@@ -738,6 +750,7 @@ output
 ['cherry','orange','kiwi']
 ```
 
+Example
 ```python
 thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
 print(thislist[:4]) # start from index[0] to index[3]
@@ -747,6 +760,7 @@ Output
 ['apple','banana','cherry','orange']
 ```
 
+Example
 ```python
 thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
 print(thislist[2:]) # start from 2 to last item
@@ -757,6 +771,8 @@ Output:
 ```
 
 #### Range of negative index or negative slicing
+
+Example
 ```python
 thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
 print(thislist[-4:-1])
@@ -767,6 +783,8 @@ output
 ```
 
 #### Check if Item Exists
+
+Example
 ```python
 thislist = ['apple','banana','cherry']
 if "apple" in thislist:
@@ -782,6 +800,7 @@ Yes, 'apple' is in the fruits list.
 
 ### Change Item Values
 
+Example
 ```python
 thislist = ["Apple","Banana","Cherry"]
 thislist[1] = "Blackcurrant"
@@ -792,6 +811,8 @@ Output
 ['Apple','Blackcurrant','Cherry']
 ```
 ### Change a range of items values
+
+Example
 ```python
 thislist = ["apple", "banana", "cherry", "orange", "kiwi", "mango"]
 thislist[1:3] = ['blackcurrant','watermelon']
@@ -802,6 +823,8 @@ Output
 ['apple', 'blackcurrant', 'watermelon', 'orange', 'kiwi', 'melon', 'mango']
 ```
 #### Change the second value by replacing it with two new values
+
+Example
 ```python
 thislist = ['apple', 'banana', 'cherry']
 # add 2nd index `['blackcurrant', 'watermelon']` and add cherry at 3rd index
@@ -814,6 +837,8 @@ Output:
 ```
 
 #### Change the second and third value by replacing it with one value
+
+Example
 ```python
 thislist = ["apple","banana","cherry"]
 thislist[1:3] = ["watermelon"]
@@ -827,6 +852,7 @@ Output
 ### Insert Items
 - To insert a new item, without replacing any of the existing values, we can use the `insert()` method.
 
+Example
 ```python
 thislist = ["apple","banana","cherry"]
 thislist.insert(2, "watermelon")
@@ -839,6 +865,8 @@ Output
 
 ### Add list items
 1) `append()` :
+
+Example
 ```python
 thislist = ["apple","banana","cherry"]
 thislist.append("orange")
@@ -850,6 +878,8 @@ Output
 ```
 
 2) `insert()` :
+
+Example
 ```python
 thislist = ["apple", "banana", "cherry"]
 thislist.insert(1, "orange")
@@ -861,6 +891,8 @@ output
 ```
 
 3) `extend()` :
+
+Example
 ```python
 thislist = ["apple","banana","cherry"]
 tropical = ["mango","pineapple","papaya"]
@@ -873,6 +905,8 @@ Output
 ```
 
 Add any iterable :
+
+Example
 ```python
 thislist = ["apple", "banana", "cherry"]
 thistuple = ("kiwi", "orange")
@@ -886,6 +920,8 @@ Output
 
 ### Remove list items
 1) `remove()` :
+
+Example
 ```python
 thislist = ['apple', 'banana', 'cherry']
 thislist.remove('banana')
@@ -898,6 +934,7 @@ Output
 | Note : If there are more than one item with the specified value, the remove() method removes the first occurrence |
 |-------------------------------------------------------------------------------------------------------------------|
 
+Example
 ```python
 thislist = ["apple", "banana", "cherry", "banana", "kiwi"]
 thislist.remove("banana")
@@ -930,6 +967,8 @@ Output
 ['apple','banana']
 ```
 3) `del` : This `del` keyword also removes the specified index.
+
+Example
 ```python
 thislist = ["apple", "banana", "cherry"]
 del thislist[0]
@@ -941,12 +980,16 @@ output
 ```
 
 4) `del` : delete list
+
+Example
 ```python
 thislist = ["apple", "banana", "cherry"]
 del thislist
 ```
 
 5) `clear()` : empty the list
+
+Example
 ```python
 thislist = ["apple","banana","cherry"]
 thislist.clear()
@@ -959,6 +1002,8 @@ Output
 
 ### for loop in a list
 1) loop through a list: 
+
+Ex.
 ```python
 thislist = ["apple", "banana", "cherry"]
 for x in thislist:
@@ -971,6 +1016,8 @@ banana
 cherry
 ```
 2) `range()` with `len()`
+
+Ex.
 ```python
 thislist = ["apple", "banana", "cherry"]
 for i in range(len(thislist)):
@@ -983,6 +1030,8 @@ Output
 2
 ```
 ### while loop in a list
+
+Ex.
 ```python
 thislist = ["apple", "banana", "cherry"]
 i = 0
@@ -998,6 +1047,8 @@ cherry
 ```
 ### list comprehension 
 1) list comprehension offers a shorter syntax when you want to create a new list based on the values of an existing list.
+
+Ex.
 ```python
 # simple for list with if condition
 fruits = ["apple","banana","cherry"]
@@ -1030,6 +1081,8 @@ Output
 
 2) Condition
 - The condition is like a filter that only accepts the items that valuate to `true`.
+
+Ex.
 ```python
 fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
 newlist = [x for x in fruits if x != "apple"]
@@ -1040,6 +1093,8 @@ Output
 ['banana', 'cherry', 'kiwi', 'mango']
 ```
 - with no `if` condition
+
+Ex.
 ```python
 fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
 newlist = [x for x in fruits]
@@ -1051,6 +1106,8 @@ Output:
 ```
 
 3) Iterable
+
+Ex.
 ```python
 newlist = [x for x in range(10)]
 ```
@@ -1060,6 +1117,8 @@ Output:
 ```
 
 - Iterable with conditions
+
+Ex.
 ```python
 newlist = [x for x in range(10) if x > 5]
 print(newlist)
@@ -1071,6 +1130,8 @@ Output
 
 4) Expression
 - The expression is the current item in the iteration, but it is also the outcome, which you can manipulate before it ends up like a list item in the new list
+
+Ex.
 ```python
 fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
 newlist = [x.upper() for x in fruits]
@@ -1081,6 +1142,8 @@ Output
 ['APPLE', 'BANANA', 'CHERRY', 'KIWI', 'MANGO']
 ```
 Ex 2: You can set the outcome to whatever you like
+
+Ex.
 ```python
 fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
 newlist = ['hello' for x in fruits]
@@ -1092,6 +1155,8 @@ Output
 ```
 
 Ex. 2: The expression can also contain conditions, not like a filter, but as a way to manipulate the outcome
+
+Ex.
 ```python
 fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
 newlist = [x if x != 'banana' else "orange" for x in fruits]
@@ -1105,6 +1170,8 @@ Output:
 ### sort Lists
 1) Sort list alphanumerically(`sort()`) :
 - list objects have a `sort()` method that will sort the list alphanumerically, ascending, by default:
+
+Ex.
 ```python
 fruits = ["orange" ,"mango", "kivi", "pineapple", "banana"]
 fruits.sort()
@@ -1115,6 +1182,8 @@ Output
 ['banana', 'kivi', 'mango', 'orange', 'pineapple']
 ```
 - With numeric values:
+
+Ex.
 ```python
 thislist = [100, 50, 65, 82, 23]
 thislist.sort()
@@ -1126,6 +1195,8 @@ Output
 ```
 
 2) sort Descending(`sort(reverse = True)`) :
+
+Ex.
 ```python
 thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
 thislist.sort(reverse = True)
@@ -1179,6 +1250,8 @@ Output:
 
 4) case-insensitive sort : 
 - By default, the sort() method is a case sensitive, resulting in all capital letters being sorted before lower case letters
+
+Ex.
 ```python
 thislist = ["banana", "Orange", "Kiwi", "cherry"]
 thislist.sort() # first capital letter and then lower latter
@@ -1189,6 +1262,8 @@ Output
 ['Kiwi', 'Orange', 'banana', 'cherry'
 ```
 - `str.lower`
+
+Ex.
 ```python
 thislist = ["banana", "Orange", "Kiwi", "cherry"]
 thislist.sort(key=str.lower) # lower letters first and then capital letters
@@ -1200,6 +1275,8 @@ output
 ```
 
 5) Reverse Order `reverse()` :
+
+Ex.
 ```python
 thislist = ["banana", "Orange", "Kiwi", "cherry"]
 thislist.reverse() # reverse order of `thislist`
@@ -1213,6 +1290,8 @@ Output
 ### Copy List
 1) Copy a list
 - `copy()` :
+
+Ex.
 ```python
 thislist = ["apple", "banana", "cherry"]
 mylist = thislist.copy()
@@ -1224,6 +1303,8 @@ Output
 ```
 
 - `list()` :
+
+Ex.
 ```python
 thislist = ['apple', 'banana', 'cherry']
 mylist = list(thislist)
@@ -1236,6 +1317,8 @@ Output
 
 ### Join List
 1) Join two lists with `+` :
+
+Ex.
 ```python
 list1 = ["a", "b", "c"]
 list2 = [1, 2, 3]
@@ -1248,6 +1331,8 @@ Output
 ['a', 'b', 'c', 1, 2, 3]
 ```
 2) join lists with `for` loop :
+
+Ex.
 ```python
 list1 = ["a", "b", "c"]
 list2 = [1, 2, 3]
@@ -1263,6 +1348,8 @@ Output
 ```
 
 3) join lists with `extend()` :
+
+Ex.
 ```python
 list1 = ['a', 'b', 'c']
 list2 = [1, 2, 3]
@@ -1284,6 +1371,8 @@ Output
 
 
 #### How to create a tuple:
+
+Ex.
 ```python
 thistuple = ("apple","banana","cherry")
 print(thistuple)
@@ -2351,32 +2440,22 @@ def add_number(a, b):
     return a + b
 ```
 
-**Parameters and arguments**
-- Paremeter are variables in a function defination.
-- Arguments are values passed into a function when it is called.
-
+**None**
+Ex.
 ```python
-def greet(name):
-    print("Hello, "+name+"!")
-greet("Alice")
+def addition(num1, num2):
+    total = num1 + num2
+    print(total)
+
+x = addition(100, 200)
+print(x)
 ```
 Output:
-```python
-Hello, Alice!
 ```
-**Default Values**
-- function parameter can have default values, which are used if the caller dose not provide value for that parameter.
-```python
-def greet(name="Guest"):
-    print("Hello, "+name+"!")
-greet()
-greet("Alice")
+300
+None
 ```
-Output
-```python
-Hello, Guest!
-Hello, Alice!
-```
+
 
 **Scope**
 - The Scope in Python refers to the region of a program where a particular identifier (like a variable or function)  is recognized or accessible.
@@ -2404,6 +2483,134 @@ def my_function():
 
 my_function()
 ```
+
+**Parameters and arguments**
+- Parameter is variables in a function definition.
+- Arguments are values passed into a function when it is called.
+
+```python
+def greet(name): # name is a Parameter
+    print("Hello, "+name+"!")
+greet("Alice") # "Alice" is a Argument
+```
+Output:
+```python
+Hello, Alice!
+```
+
+**Types of arguments :**
+- In Python, 
+  - there are several types of arguments that can be passed to a function.
+  - The way you define and use these arguments allows for flexibility in function design. 
+
+Here are the common types:
+1. Positional Arguments
+2. Keyword Arguments
+3. Default Arguments
+4. Variable-Length Positional Arguments (`*args`)
+5. Variable-Length Keyword Arguments (`**kwargs`)
+6. Keyword-Only Arguments
+
+
+1. **Positional Arguments:**
+   - These are the most basic type of arguments.
+   - They are passed to a function in the order in which they are defined.
+   - Example:
+     ```python
+     def add(a, b):
+         return a + b
+
+     result = add(3, 5)
+     ```
+     output
+     ```
+        8
+      ```
+
+2. **Keyword Arguments:**
+   - Arguments passed to a function using the name of the parameter.
+   - Order does not matter when using keyword arguments.
+   - Example:
+     ```python
+     def greet(name, message):
+         print(f"{message}, {name}!")
+
+     greet(message="Hello", name="Alice")
+     ```
+output
+```
+Hello, Alice!
+```
+
+3. **Default Arguments:**
+   - Parameters with default values.
+   - If a value is not provided for a default argument, the default value is used.
+   - Example:
+     ```python
+     def power(x, exponent=2):
+         return x ** exponent
+
+     result = power(3)  # Uses default exponent value of 2
+     ```
+output
+```
+9
+```
+
+4. **Variable-Length Positional Arguments (`*args`):**
+   - Allows a function to accept any number of positional arguments.
+   - Arguments are captured into a tuple.
+   - Example:
+     ```python
+     def print_values(*args):
+         for value in args:
+             print(value)
+
+     print_values(1, 2, 3, 4)
+     ```
+output
+```
+1
+2
+3
+4
+```
+
+
+5. **Variable-Length Keyword Arguments (`**kwargs`):**
+   - Allows a function to accept any number of keyword arguments.
+   - Arguments are captured into a dictionary.
+   - Example:
+     ```python
+     def print_values(**kwargs):
+         for key, value in kwargs.items():
+             print(f"{key}: {value}")
+
+     print_values(name="Alice", age=25)
+     ```
+output
+```
+name: Alice
+age: 25
+```
+
+
+6. **Keyword-Only Arguments:**
+   - Parameters that must be passed using keyword syntax.
+   - Defined after a single `*` in the function signature.
+   - Example:
+     ```python
+     def greet(*, name, message):
+         print(f"{message}, {name}!")
+
+     greet(name="Bob", message="Hi")
+     ```
+output
+```
+Hi, Bob!
+```
+
+
 **Docstrings**
 - It's good practice to include a docstring (triple-quoted string) at the beginning of a function to describe its purpose, parameters, and return values.
 ```python
