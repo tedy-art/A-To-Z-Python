@@ -20,15 +20,15 @@
 6) inheritance
 7) polymorphism
 
-**1) Basic of OOP:**
+## 1) Basic of OOP:
 - Object-oriented programming is a programming paradigm that uses objects to structure code.
 - In python, everything is an object, and the language supports OOP principle.
 
-**2) class :**
+## 2) class :
 - a class is a blueprint for creating objects.
 - it defines a data structure(attributes) and methods to manipulate that data.
 
-**3) objects :**
+## 3) objects :
 - An object is an instance of a class. 
 - it represents a real-world entity and has its own state and behavior.
 - objects are created based on the structure defined by the class.
@@ -56,15 +56,15 @@ Buddy
 woof!
 ```
 
-**4) Encapsulation**
+## 4) Encapsulation
 - Wrapping of data and methods together in one class is called Encapsulation.
 - you can hide the internal state of an object from outside.
 
 In python, encapsulation is achieved using access modifiers to control the visibility of attributes and methods.
 There are three levels of access:
 1) Public(default)
-2) Protected('_' prefix)
-3) Private('__' prefix)
+2) Protected('_' prefix) [single underscore]
+3) Private('_ _' prefix) [Double underscore]
 
 **1) Public access modifiers:**
 - Members are accessible from outside the class.
@@ -187,3 +187,7 @@ print(obj.__private_attribute)
 # Accessing private method (will raise an AttributeError)
 obj.__private_method()
 ```
+Ex> private 
+
+## 5) Abstraction
+
