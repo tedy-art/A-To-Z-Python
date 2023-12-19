@@ -2664,6 +2664,19 @@ list1 :[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 list2 :[0, 1, 2, 3, 4, 5]
 ```
 
+```python
+check_even = lambda num : num % 2 == 0
+
+if check_even(16):
+    print("even")
+else:
+    print("odd")
+```
+Output:
+```python
+even
+```
+
 **Recursion**
 - Functions can call themselves, allowing for recursive behavior.
 ```python
