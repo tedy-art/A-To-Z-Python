@@ -71,8 +71,227 @@ Output
 Buddy
 woof!
 ```
+| NOTE: functions that are defined within a class are typically referred to as "methods,"</br> while functions that exist outside of a class are generally called "functions." |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-## 4) Encapsulation
+```python
+from random import randint
+
+
+class Bank:
+    def __init__(self):
+        self.account = randint(100000, 999999)
+        self.full_name = input("Enter name : ")
+        self.phone_number = int(input("Enter phone number : "))
+        self.balance = 0
+
+    def show_info(self):
+        print(f"Account number : {self.account}")
+        print(f"Full name : {self.full_name}")
+        print(f"Balance : {self.balance}\n")
+
+    def show_balance(self):
+        print(f"Current Balance = {self.balance}")
+
+    def withdraw(self):
+        amount = int(input("Enter amount to withdraw : "))
+        if amount > self.balance:
+            print("Insufficient Balance")
+        else:
+            self.balance -= amount
+
+    def deposit(self):
+        amount = int(input("Enter amount to deposit : "))
+        self.balance += amount
+
+
+banks = []
+
+
+def check_account_exists(acc_no: int):
+    global banks
+    for obj in banks:
+        if obj.account == acc_no:
+            return obj
+    return None
+
+
+while True:
+    print("1. create account.")
+    print("2. show all details.")
+    print("3. deposit.")
+    print("4. withdraw")
+    print("5. Transfer")
+    print("6. Exit")
+    choice = int(input("Enter choice : "))
+    if choice == 1:
+        obj = Bank()
+        banks.append(obj)
+        print(banks)
+    elif choice == 2:
+        if len(banks) == 0:
+            print("No account has been created yet")
+        else:
+            for account in banks:
+                account.show_info()
+    elif choice == 3:
+        if len(banks) == 0:
+            print("No account has been created yet")
+        else:
+            acc_no = int(input("Enter account number to deposit :"))
+            for obj in banks:
+                if obj.account == acc_no:
+                    obj.deposit()
+                    break
+                else:
+                    print("Invalid account number.")
+    elif choice == 4:
+        if len(banks) == 0:
+            print("No account has been created yet")
+        else:
+            acc_no = int(input("Enter account number to withdraw :"))
+            for i in banks:
+                if i.account == acc_no:
+                    i.withdraw()
+                    break
+                else:
+                    print("Invalid account number.")
+    elif choice == 5:
+        from_acc_no = int(input("Enter account number from which you want to transfer :"))
+        to_acc_no = int(input("Enter account number to which you want to transfer :"))
+        from_acc_obj = check_account_exists(from_acc_no)
+        to_acc_obj = check_account_exists(to_acc_no)
+        if from_acc_obj != None and to_acc_obj != None:
+            transfer_amount = int(input("Enter transfer amount :"))
+            if from_acc_obj.balance < transfer_amount:
+                print("Insufficient Balance!")
+            else:
+                from_acc_obj.balance -= transfer_amount
+                to_acc_obj.balance += transfer_amount
+        else:
+            print("account dose not exists!!")
+
+    elif choice == 6:
+        break
+    else:
+        print("Invalid choice!")
+```
+Output:
+```
+1. create account.
+2. show all details.
+3. deposit.
+4. withdraw
+5. Transfer
+6. Exit
+Enter choice : 1
+Enter name : Tejas
+Enter phone number : 9854875487
+[<__main__.Bank object at 0x000001BA270B6010>]
+
+1. create account.
+2. show all details.
+3. deposit.
+4. withdraw
+5. Transfer
+6. Exit
+Enter choice : 1
+Enter name : Ak
+Enter phone number : 8787878787
+[<__main__.Bank object at 0x000001BA270B6010>, <__main__.Bank object at 0x000001BA270C4D10>]
+
+1. create account.
+2. show all details.
+3. deposit.
+4. withdraw
+5. Transfer
+6. Exit
+Enter choice : 2
+Account number : 213328
+Full name : Tejas
+Balance : 0
+
+Account number : 291270
+Full name : Ak
+Balance : 0
+
+1. create account.
+2. show all details.
+3. deposit.
+4. withdraw
+5. Transfer
+6. Exit
+Enter choice : 3
+Enter account number to deposit :291270
+Enter amount to deposit : 5000
+
+1. create account.
+2. show all details.
+3. deposit.
+4. withdraw
+5. Transfer
+6. Exit
+Enter choice : 2
+Account number : 213328
+Full name : Tejas
+Balance : 0
+
+Account number : 291270
+Full name : Ak
+Balance : 5000
+
+1. create account.
+2. show all details.
+3. deposit.
+4. withdraw
+5. Transfer
+6. Exit
+Enter choice : 4
+Enter account number to withdraw :291270
+Enter amount to withdraw : 500
+
+1. create account.
+2. show all details.
+3. deposit.
+4. withdraw
+5. Transfer
+6. Exit
+Enter choice : 5
+Enter account number from which you want to transfer :291270
+Enter account number to which you want to transfer :213328
+Enter transfer amount :2500
+
+1. create account.
+2. show all details.
+3. deposit.
+4. withdraw
+5. Transfer
+6. Exit
+Enter choice : 2
+Account number : 213328
+Full name : Tejas
+Balance : 2500
+
+Account number : 291270
+Full name : Ak
+Balance : 2000
+
+1. create account.
+2. show all details.
+3. deposit.
+4. withdraw
+5. Transfer
+6. Exit
+Enter choice : 6
+
+```
+4) Pillars of OOPS
+   1) encapsulation
+   2) abstraction
+   3) inheritance
+   4) polymorphism
+   
+## 1) Encapsulation
 - Wrapping of data and methods together in one class is called Encapsulation.
 - you can hide the internal state of an object from outside.
 
@@ -230,5 +449,5 @@ print(employee._Employee__salary)
 # Receiving a salary using the public method
 employee.receive_salary(5000.00)
 ```
-## 5) Abstraction
+## 2) Abstraction
 
