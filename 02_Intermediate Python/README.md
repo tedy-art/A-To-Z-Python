@@ -1,28 +1,44 @@
 ### 2. Intermediate Python
 
-| Topic                             | Description                                                           |
-|-----------------------------------|-----------------------------------------------------------------------|
-| Object-Oriented Programming (OOP) | Basics of OOP, classes, objects, inheritance, polymorphism            |
-| Functions                         | Advanced function concepts, lambda functions                          |
-| Higher-Order Functions            | Definition,map(), filter(), reduce(), Functional Programming Concepts |
-| File Handling                     | Reading from and writing to files                                     |
-| Modules and Packages              | Organizing code into reusable modules and packages                    |
-| Decorators                        | Enhancing the functionality of functions                              |
-| Generators and Iterators          | Writing memory-efficient code                                         |
-| Regular Expressions               | Pattern matching using regular expressions                            |
+| Topic                             | Description                                                                            |
+|-----------------------------------|----------------------------------------------------------------------------------------|
+| Object-Oriented Programming (OOP) | Basics of OOP, classes, objects, encapsulation, abstraction, inheritance, polymorphism |
+| Functions                         | Advanced function concepts, lambda functions                                           |
+| Higher-Order Functions            | Definition,map(), filter(), reduce(), Functional Programming Concepts                  |
+| File Handling                     | Reading from and writing to files                                                      |
+| Modules and Packages              | Organizing code into reusable modules and packages                                     |
+| Decorators                        | Enhancing the functionality of functions                                               |
+| Generators and Iterators          | Writing memory-efficient code                                                          |
+| Regular Expressions               | Pattern matching using regular expressions                                             |
 
 # Object-Oriented Programming(OOP):
 1) Basic of OOP
 2) class
 3) objects
-4) encapsulation
-5) abstraction
-6) inheritance
-7) polymorphism
+4) Pillars of OOPS
+   1) encapsulation
+   2) abstraction
+   3) inheritance
+   4) polymorphism
 
 ## 1) Basic of OOP:
 - Object-oriented programming is a programming paradigm that uses objects to structure code.
 - In python, everything is an object, and the language supports OOP principle.
+
+__1.1 What is OOPS??__
+- Object-Oriented Programming (OOP) is a programming paradigm that organizes code into objects, each of which represents an instance of a class. The fundamental idea behind OOP is to model real-world entities and problems by creating and manipulating objects, which are instances of classes.
+- Object-Oriented Programming (OOP) is a programming paradigm designed to model real-world entities and solve complex problems by organizing code into objects, which represent instances of classes.
+-  OOP promotes the DRY principle by encouraging code reuse through concepts like inheritance and encapsulation. With inheritance, you can create a new class by inheriting attributes and methods from an existing class, reducing code duplication.
+
+###  1.2 `_ _init_ _()`:
+- `__init__()` is a special method in Python classes, also known as the constructor.
+- It is automatically called when an object is created from a class, and it initializes the object's attributes. 
+- The name `__init__` stands for "initialize."
+
+### 1.3 self:
+- self is a convention used to represent the instance of a class.
+- It is the first parameter in the definition of instance methods, including special methods like `__init__`.
+- The name self is not a keyword in the language; rather, it's a widely adopted convention.
 
 ## 2) class :
 - a class is a blueprint for creating objects.
@@ -188,6 +204,31 @@ print(obj.__private_attribute)
 obj.__private_method()
 ```
 Ex> private 
+```python
+class Employee:
+    def __init__(self, name, salary):
+        self.name = name
+        self.__salary = salary  # Private attribute with name mangling
 
+    def __deduct_tax(self, amount):
+        tax_rate = 0.15
+        taxed_amount = amount * (1 - tax_rate)
+        self.__salary -= taxed_amount  # Private method
+
+    def receive_salary(self, amount):
+        self.__deduct_tax(amount)
+        print(f"{self.name} received a salary of ${amount:.2f}. Net salary after tax: ${self.__salary:.2f}")
+
+# Creating an object of the Employee class
+employee = Employee(name="Alice", salary=50000.00)
+
+# Accessing the private attribute from outside the class (name mangling is applied)
+# This is not recommended and should be avoided.
+# Note: Do not use the mangled name directly, use the attribute as intended.
+print(employee._Employee__salary)
+
+# Receiving a salary using the public method
+employee.receive_salary(5000.00)
+```
 ## 5) Abstraction
 
