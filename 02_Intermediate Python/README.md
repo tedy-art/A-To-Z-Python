@@ -729,3 +729,82 @@ This function is in student1.
 This function is in school.
 ```
 
+### 4) polymorphism 
+- polymorphism refers to having multiple forms.
+- polymorphism is a programming term refer to use of the some function name but defferant signiture.
+- e.g. `len()` it is used for a strings as well as integers.
+
+Here are key points about polymorphism:
+1. **Method Overriding:**
+   - Polymorphism often involves method overriding, where a method in a base class is redefined (or overridden) in a derived class. This allows objects of different classes to provide their own implementation of a common method.
+
+    ```python
+    class Animal:
+        def speak(self):
+            return "Animal speaks"
+
+    class Dog(Animal):
+        def speak(self):
+            return "Dog barks"
+
+    class Cat(Animal):
+        def speak(self):
+            return "Cat meows"
+    ```
+
+2. **Common Interface:**
+   - Polymorphism relies on a common interface, typically represented by a base class or an interface (in languages that support interfaces). Objects of different classes that share a common interface can be used interchangeably.
+
+    ```python
+    def animal_speech(animal):
+        return animal.speak()
+
+    dog = Dog()
+    cat = Cat()
+
+    print(animal_speech(dog))  # Output: Dog barks
+    print(animal_speech(cat))  # Output: Cat meows
+    ```
+
+3. **Duck Typing:**
+   - Some languages, including Python, follow the principle of "duck typing," where the suitability of an object for a particular operation is determined by its method and attributes rather than its type.
+
+    ```python
+    def print_area(shape):
+        print(f"The area is: {shape.calculate_area()}")
+
+    class Circle:
+        def calculate_area(self):
+            return 3.14 * self.radius ** 2
+
+    class Rectangle:
+        def calculate_area(self):
+            return self.length * self.width
+
+    # Both Circle and Rectangle can be passed to the print_area function
+    print_area(Circle(radius=5))  # Output: The area is: 78.5
+    print_area(Rectangle(length=4, width=3))  # Output: The area is: 12
+    ```
+
+4. **Operator Overloading:**
+   - Polymorphism can extend to operators, allowing objects of different classes to respond to the same operator in a way that makes sense for each class.
+
+    ```python
+    class Vector:
+        def __init__(self, x, y):
+            self.x = x
+            self.y = y
+
+        def __add__(self, other):
+            return Vector(self.x + other.x, self.y + other.y)
+
+    vec1 = Vector(x=1, y=2)
+    vec2 = Vector(x=3, y=4)
+
+    result = vec1 + vec2
+    print(f"Resultant Vector: ({result.x}, {result.y})")  # Output: Resultant Vector: (4, 6)
+    ```
+
+- Polymorphism enhances code flexibility, reusability, and extensibility by allowing code to work with objects in a more generic way. 
+- It promotes a more natural representation of real-world relationships and behaviors in code.
+
