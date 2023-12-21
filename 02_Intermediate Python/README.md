@@ -818,7 +818,7 @@ Here are key points about polymorphism:
 | 4     | Sorting with Lambda     | 
 | 5     | Conditional Expressions | 
 
-### 1) Annotations
+## 1) Annotations
 - Function annotations in Python allow you to attach additional information about the types of function parameters and the return value.
 - Annotations are not enforced by the Python interpreter but can be used for documentation or type hinting.
 
@@ -843,7 +843,7 @@ print(add.__annotations__)
 # Output: {'x': <class 'int'>, 'y': <class 'int'>, 'return': <class 'int'>}
 ```
 
-### 2)Lambda Function
+## 2)Lambda Function
 - Lambda functions, also known as anonymous functions, are concise one-line created using the `lambda` keyword.
 - They are often used for short, one-time operations where a full function definition is not required.
 - Lambda functions can take any number of arguments but can only have one expression.
@@ -895,10 +895,44 @@ Output:
 even
 ```
 
+## Lambda with other functions:
 - Lambda functions are often used in conjunction with functions like `map()`, `filter()`, and `sorted()`.
 - They are useful when you need a quick, throwaway function without the formality of a full function definition.
 
 1) using lambda with `map()`:
+
+### `map()`:
+- The `map()` function executes a specified function for each item in an iterable. 
+- The item is sent to the function as a parameter.
+
+Syntax
+```
+map(function, iterables)
+```
+#### Parameter Values
+| Parameter	 | Description                                                                                                                                                          |
+|------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| function	  | Required. The function to execute for each item                                                                                                                      |
+| iterable   | Required. A sequence, collection or an iterator object. You can send as many iterables as you like, just make sure the function has one parameter for each iterable. |
+
+Ex.
+```python
+def myfunc(a, b):
+  return a + b
+
+x = map(myfunc, ('apple', 'banana', 'cherry'), ('orange', 'lemon', 'pineapple'))
+
+print(x)
+
+#convert the map into a list, for readability:
+print(list(x))
+```
+Output:
+```
+<map object at 0x034244F0>
+['appleorange', 'bananalemon', 'cherrypineapple']
+```
+Ex. lambda with `map()`
 ```python
 numbers = [1, 2, 3, 4, 5]
 squared = list(map(lambda x: x ** 2, numbers))
@@ -906,6 +940,42 @@ print(squared)  # Output: [1, 4, 9, 16, 25]
 ```
 
 2) using lambda with `filter()`:
+### `filter()`:
+- The filter() function returns an iterator where the items are filtered through a function to test if the item is accepted or not.
+
+Syntax
+```
+filter(function, iterable)
+```
+#### Parameter Values
+| Parameter | 	Description                                        |
+|-----------|-----------------------------------------------------|
+| function  | 	A Function to be run for each item in the iterable |
+| iterable  | 	The iterable to be filtered                        |
+
+Ex.
+```python
+ages = [5, 12, 17, 18, 24, 32]
+
+def myFunc(x):
+  if x < 18:
+    return False
+  else:
+    return True
+
+adults = filter(myFunc, ages)
+
+for x in adults:
+  print(x)
+```
+output:
+```
+18
+24
+32
+```
+
+Ex. using lambda with `filter()`
 ```python
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
@@ -919,3 +989,30 @@ sorted_students = sorted(students, key=lambda student: student[1])
 print(sorted_students)
 # Output: [('Bob', 19), ('Alice', 22), ('Charlie', 25)]
 ```
+
+## Conditional Expressions:
+- Conditional expressions, also known as ternary operators, provide a concise way to express conditional statements in a single line.
+- syntax
+```python
+result_if_true if condition else result_if_false
+```
+Ex1.
+```python
+x = 5
+y = 10
+max_value = x if x > y else y
+print(max_value)  # Output: 10
+```
+Ex2.
+```python
+value = 15
+status = "Even" if value % 2 == 0 else "Odd"
+print(status)  # Output: Odd
+```
+
+#  Higher-Order Functions
+1) Definition
+2) map()
+3) filter()
+4) reduce()
+5) Functional Programming Concepts
