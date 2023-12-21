@@ -14,16 +14,16 @@
 
 ### 2. Intermediate Python
 
-| Topic                             | Description                                                           |
-|-----------------------------------|-----------------------------------------------------------------------|
-| Object-Oriented Programming (OOP) | Basics of OOP, classes, objects, inheritance, polymorphism            |
-| Functions                         | Advanced function concepts, lambda functions                          |
-| Higher-Order Functions            | Definition,map(), filter(), reduce(), Functional Programming Concepts |
-| File Handling                     | Reading from and writing to files                                     |
-| Modules and Packages              | Organizing code into reusable modules and packages                    |
-| Decorators                        | Enhancing the functionality of functions                              |
-| Generators and Iterators          | Writing memory-efficient code                                         |
-| Regular Expressions               | Pattern matching using regular expressions                            |
+| Topic                             | Description                                                                            |
+|-----------------------------------|----------------------------------------------------------------------------------------|
+| Object-Oriented Programming (OOP) | Basics of OOP, classes, objects, encapsulation, abstraction, inheritance, polymorphism |
+| Functions                         | Advanced function concepts, lambda functions                                           |
+| Higher-Order Functions            | Definition,map(), filter(), reduce(), Functional Programming Concepts                  |
+| File Handling                     | Reading from and writing to files                                                      |
+| Modules and Packages              | Organizing code into reusable modules and packages                                     |
+| Decorators                        | Enhancing the functionality of functions                                               |
+| Generators and Iterators          | Writing memory-efficient code                                                          |
+| Regular Expressions               | Pattern matching using regular expressions                                             |
 
 ### 3. Data Structure
 | Topic                           | Subtopics and Concepts                                   |
