@@ -451,3 +451,59 @@ employee.receive_salary(5000.00)
 ```
 ## 2) Abstraction
 
+- Abstraction in python is defined as a process of hiding or reducing complexity by hiding unnecessary details from user.
+- abstract classes provide a blueprint for other classes and may contain abstract method that must be implemented by concrete subclass.
+- we cannot create an object of abstract class.
+- ### __`@abstractmethod`:__
+    - If we intend to create an abstract method, it is necessary to import the 'abstract' module.
+    - Then, define a function and annotate it with the `@abstractmethod` decorator to designate it as an abstract method.
+    - Additionally, the 'abstract' module includes a 'pass' statement within it.
+    - Ex
+    ```python
+     from abc import ABC, abstractmethod
+  
+    class class_name(ABC):
+        @abstactmethod
+        def abstract_method_name(self):
+            pass
+    ```   
+
+ex
+```python
+from abc import ABC, abstractmethod
+
+# Abstract class representing a Shape
+class Shape(ABC):
+    @abstractmethod
+    def area(self):
+        pass
+
+# Concrete class representing a Circle
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return 3.14 * self.radius ** 2
+
+# Concrete class representing a Square
+class Square(Shape):
+    def __init__(self, side_length):
+        self.side_length = side_length
+
+    def area(self):
+        return self.side_length ** 2
+
+# Using abstraction to create objects
+circle = Circle(radius=5)
+square = Square(side_length=4)
+
+# Accessing the abstract interface without worrying about internal details
+print(f"Area of Circle: {circle.area()}")
+print(f"Area of Square: {square.area()}")
+```
+Output:
+```python
+Area of Circle: 78.5
+Area of Square: 16
+```
