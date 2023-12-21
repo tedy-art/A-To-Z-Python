@@ -2628,55 +2628,6 @@ def add(a, b):
     return a + b
 ```
 
-**Lambda Function**
-- Lambda functions, also known as anonymous functions, are concise one-line created using the `lambda` keyword.
-syntax:
-```python
-assign_name = lambda args1, args2, args3 : args1 + args2 + args3
-print(assign_name(para1, para2, para3))
-```
-
-```python
-square = lambda x:x ** 2
-result = square(5)
-print(result)
-```
-output
-```python
-25
-```
-
-Ex.
-Take argument which will be number
-make a list 0 to N
-```python
-
-make_list = lambda x:[i for i in range(0, x + 1)]
-list1 = make_list(9)
-list2 = make_list(5)
-
-print(f"list1 :{list1}")
-print(f"list2 :{list2}")
-```
-Output:
-```python
-list1 :[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-list2 :[0, 1, 2, 3, 4, 5]
-```
-
-```python
-check_even = lambda num : num % 2 == 0
-
-if check_even(16):
-    print("even")
-else:
-    print("odd")
-```
-Output:
-```python
-even
-```
-
 **Recursion**
 - Functions can call themselves, allowing for recursive behavior.
 ```python
