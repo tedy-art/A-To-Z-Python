@@ -808,3 +808,114 @@ Here are key points about polymorphism:
 - Polymorphism enhances code flexibility, reusability, and extensibility by allowing code to work with objects in a more generic way. 
 - It promotes a more natural representation of real-world relationships and behaviors in code.
 
+# Functions
+
+| sr.no | Concept                 | 
+|-------|-------------------------|
+| 1     | Annotations             | 
+| 2     | Lambda Functions        | 
+| 3     | Using Lambda with `map` | 
+| 4     | Sorting with Lambda     | 
+| 5     | Conditional Expressions | 
+
+### 1) Annotations
+- Function annotations in Python allow you to attach additional information about the types of function parameters and the return value.
+- Annotations are not enforced by the Python interpreter but can be used for documentation or type hinting.
+
+Here's an example:
+
+```python
+def add(x: int, y: int) -> int:
+    """Add two numbers."""
+    return x + y
+```
+
+In this example:
+
+- `x: int` and `y: int` are parameter annotations indicating that `x` and `y` should be of type `int`.
+- `-> int` is the return type annotation indicating that the function returns an `int`.
+- The docstring provides additional documentation.
+
+Function annotations can be accessed using the `__annotations__` attribute:
+
+```python
+print(add.__annotations__)
+# Output: {'x': <class 'int'>, 'y': <class 'int'>, 'return': <class 'int'>}
+```
+
+### 2)Lambda Function
+- Lambda functions, also known as anonymous functions, are concise one-line created using the `lambda` keyword.
+- They are often used for short, one-time operations where a full function definition is not required.
+- Lambda functions can take any number of arguments but can only have one expression.
+
+syntax:
+```python
+lambda arguments: expression
+```
+
+Ex:
+```python
+square = lambda x:x ** 2
+result = square(5)
+print(result)
+```
+output
+```python
+25
+```
+
+Ex.
+Take argument which will be number
+make a list 0 to N
+```python
+
+make_list = lambda x:[i for i in range(0, x + 1)]
+list1 = make_list(9)
+list2 = make_list(5)
+
+print(f"list1 :{list1}")
+print(f"list2 :{list2}")
+```
+Output:
+```python
+list1 :[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+list2 :[0, 1, 2, 3, 4, 5]
+```
+
+```python
+check_even = lambda num : num % 2 == 0
+
+if check_even(16):
+    print("even")
+else:
+    print("odd")
+```
+Output:
+```python
+even
+```
+
+- Lambda functions are often used in conjunction with functions like `map()`, `filter()`, and `sorted()`.
+- They are useful when you need a quick, throwaway function without the formality of a full function definition.
+
+1) using lambda with `map()`:
+```python
+numbers = [1, 2, 3, 4, 5]
+squared = list(map(lambda x: x ** 2, numbers))
+print(squared)  # Output: [1, 4, 9, 16, 25]
+```
+
+2) using lambda with `filter()`:
+```python
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+print(even_numbers)  # Output: [2, 4, 6, 8]
+```
+
+3) using lambda with `sorted()`:
+```python
+students = [("Alice", 22), ("Bob", 19), ("Charlie", 25)]
+sorted_students = sorted(students, key=lambda student: student[1])
+print(sorted_students)
+# Output: [('Bob', 19), ('Alice', 22), ('Charlie', 25)]
+```
