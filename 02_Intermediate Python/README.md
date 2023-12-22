@@ -1016,3 +1016,31 @@ print(status)  # Output: Odd
 3) filter()
 4) reduce()
 5) Functional Programming Concepts
+
+1) Definition:
+- A higher order function in programming is a function that can take another function as argument or return function as a result.
+- In other words, it treats functions as first-class citizens.
+- In languages that support higher-order functions:
+  - function is not just a block of code but can be passed around, 
+  - assigned to variables, 
+  - and used as arguments,
+  - return values.
+
+1) Accepting Functions as Arguments:
+   - Higher order function takes one or more functions as parameters.
+   - This allows for flexibility in behavior by allowing the caller to customize the function's operations.
+
+Ex.
+```python
+def apply_operation(func, x, y):
+    return func(x, y)
+
+def add(x, y):
+    return x + y
+
+def multiply(x, y):
+    return x * y
+
+result_add = apply_operation(add, 2, 3)
+result_multi = apply_operation(multiply, 2, 3)
+```
