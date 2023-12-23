@@ -1026,12 +1026,12 @@ print(status)  # Output: Odd
   - and used as arguments,
   - return values.
 
-1) Accepting Functions as Arguments:
+## 1) Accepting Functions as Arguments:
    - Higher order function takes one or more functions as parameters.
    - This allows for flexibility in behavior by allowing the caller to customize the function's operations.
 
 Ex.
-```python
+```python 
 def apply_operation(func, x, y):
     return func(x, y)
 
@@ -1043,4 +1043,24 @@ def multiply(x, y):
 
 result_add = apply_operation(add, 2, 3)
 result_multi = apply_operation(multiply, 2, 3)
+print(result_add)
+print(result_multi)
+```
+```
+5
+6
+```
+
+## 2) returning Functions:
+- A higher order function can also return a function as its result. 
+- THis is useful for creating function on the fly or customizing behavior based on certain conditions.
+
+```python
+def create_multipiler(factor):
+    def multipiler(x):
+        return x * factor
+    return multipiler
+
+multiply_by_2 = create_multipiler(2)
+result = multiply_by_2(5)
 ```
