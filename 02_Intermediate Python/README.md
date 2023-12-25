@@ -1099,4 +1099,18 @@ product = reduce(lambda x, y: x * y, numbers)
 # Output the result
 print(product)  # Output: 120
 ```
+ ##### Other functions are used with lambda:
 
+| Sr No | Name          | Syntax                                      | Description                                     | Example                                                                  |
+|-------|---------------|---------------------------------------------|-------------------------------------------------|--------------------------------------------------------------------------|
+| 1     | `map()`       | `map(function, iterable)`                   | Applies a function to all items in an iterable. | `list(map(lambda x: x * 2, [1, 2, 3, 4]))`                               |
+| 2     | `filter()`    | `filter(function, iterable)`                | Filters elements based on a function's result.  | `list(filter(lambda x: x % 2 == 0, [1, 2, 3, 4, 5]))`                    |
+| 3     | `reduce()`    | `reduce(function, iterable[, initializer])` | Applies a function cumulatively to the items.   | `from functools import reduce; reduce(lambda x, y: x + y, [1, 2, 3, 4])` |
+| 4     | `sorted()`    | `sorted(iterable[, key][, reverse])`        | Returns a sorted list from the elements.        | `sorted([3, 1, 4, 1, 5, 9, 2, 6, 5])`                                    |
+| 5     | `any()`       | `any(iterable)`                             | Returns `True` if at least one element is true. | `any([False, True, False])`                                              |
+| 6     | `all()`       | `all(iterable)`                             | Returns `True` if all elements are true.        | `all([True, True, True])`                                                |
+| 7     | `enumerate()` | `enumerate(iterable[, start])`              | Adds counter to an iterable and returns tuples. | `list(enumerate(['apple', 'banana', 'cherry']))`                         |
+| 8     | `zip()`       | `zip(iterable1, iterable2, ...)`            | Combines elements from two or more iterables.   | `list(zip([1, 2, 3], ['a', 'b', 'c']))`                                  |
+
+
+# File Handling :- 
