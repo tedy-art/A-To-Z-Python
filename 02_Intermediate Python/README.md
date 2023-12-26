@@ -1114,3 +1114,79 @@ print(product)  # Output: 120
 
 
 # File Handling :- 
+
+| Sr. No | Topics                    | Sub-Topics                                           |
+|--------|---------------------------|------------------------------------------------------|
+| 1      | **Introduction to Files** | Overview of file handling in Python                  |
+| 2      | **Opening Files**         | Using `open()` function<br>- Specifying file modes   |
+| 3      | **File modes**            | read, write, append, binary, Exclusive creation      |
+| 4      | **Reading from Files**    | Reading entire content<br>- Reading lines            |
+| 5      | **Writing to Files**      | Writing data to files                                |
+| 6      | **Appending to Files**    | Appending data to existing files                     |
+| 7      | **Closing Files**         | Using `with` statement<br>- Explicitly closing files |
+
+**1. Introduction to Files**
+- file handling in python refers to the ability to work with the files
+  - read from them
+  - write to them
+  - manipulate their content
+- Python provides a set of built-in functions and methods that make it easy to perform file operations.
+
+**2. Opening Files**
+- to open a file, you use the `open()` function, specifying the file path and the mode which you want to open the file (read, write, append etc.)
+
+ex
+```python
+file = open("example.txt", "r")
+```
+
+**3. File modes**
+- file modes determine the purpose for which a file is opened.
+- common modes in file handling:
+  - `r` : read — default mode for opening files
+  - `w` : write — create a new file or truncates an existing file
+  - `a` : append — add content to the end of an existing file
+  - `b` : binary mode — for handling binary files
+  - `x` : Exclusive creation — create a new file, but fails if the file already exists
+
+**4. Reading from Files**
+- Once a file is opened, 
+    - you can read its content using methods like read(), readline(), or readlines() depending on your needs.
+    - Ex  
+        ```python
+        content = file.read()
+        ```
+  
+**5. Writing to a File:**
+- In write mode,
+    - If a file is opened in write mode, you can write content to it using the write() method.
+    - Ex.
+    ```python
+    file.write("Hello, this is a sample text.")
+    ```
+
+**6. Appending to a File:**
+- In append mode, 
+    - you can add content to the end of an existing file using the write() method.
+    - Ex: 
+    ```python
+    file = open("example.txt", "a")
+    ```
+  
+**7. Closing a File:**
+- It's essential to close a file after performing operations on it.
+- While using the with statement (with open(...) as file:), the file is automatically closed when exiting the block. 
+- Otherwise, you can use file.close().
+
+```python
+file_path = 'example.txt'
+
+# write
+with open(file_path, 'w') as file:
+    file.write("Hello, this is sample text.")
+
+# read
+with open(file_path, 'r') as file:
+    content = file.read()
+    print(content)
+```
