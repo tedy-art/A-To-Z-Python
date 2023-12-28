@@ -1190,3 +1190,90 @@ with open(file_path, 'r') as file:
     content = file.read()
     print(content)
 ```
+
+# Modules and Packages
+- in python, Modules and Packages are mechanism of organizing and structuring code.
+- They help improve code maintainability, reusabilityy, and readability.
+
+## Modules
+- A module is a file containing python definations and statements.
+- It serves as a way to organize related code into a single file.
+
+
+**Creating a Module:**
+   - You can create a module by saving Python code in a file with a `.py` extension.
+   - Example: Save the following code in a file named `my_module.py`.
+     ```python
+     # my_module.py
+     def greet(name):
+         return f"Hello, {name}!"
+     ```
+
+**Using a Module:**
+   - You can use the `import` keyword to bring the definitions from a module into your code.
+   - Example:
+     ```python
+     # main.py
+     import my_module
+
+     result = my_module.greet("John")
+     print(result)
+     ```
+
+**Namespace:**
+   - Imported definitions are accessed using the module's namespace.
+   - Example: `my_module.greet("John")`
+
+## Packages:
+- A package is a way of organizing related modules into a directory hierarchy.
+- It includes a special file named `__init__.py` to indicate that the directory should be treated as a package.
+
+**Creating a Package:**
+   - Example directory structure:
+     ```
+     my_package/
+     ├── __init__.py
+     ├── module1.py
+     └── module2.py
+     ```
+
+**Using a Package:**
+   - You can use the `import` statement to import modules from a package.
+   - Example:
+     ```python
+     # main.py
+     from my_package import module1
+
+     result = module1.some_function()
+     print(result)
+     ```
+
+**Namespace in Packages:**
+   - Imported modules are accessed using the package's namespace.
+   - Example: `my_package.module1.some_function()`
+
+## Aliasing:
+
+**Module Aliasing:**
+   - You can use the `as` keyword to alias a module during import.
+   - Example:
+     ```python
+     # main.py
+     import my_module as mm
+
+     result = mm.greet("Jane")
+     print(result)
+     ```
+
+**Package Aliasing:**
+   - Similarly, you can alias packages.
+   - Example:
+     ```python
+     # main.py
+     from my_package import module1 as m1
+
+     result = m1.some_function()
+     print(result)
+     ```
+
+# Decorators
