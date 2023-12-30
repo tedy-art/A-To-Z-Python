@@ -122,3 +122,113 @@ advanced topics like dynamic programming, graph algorithms, and advanced data st
 and applying these concepts in coding exercises will reinforce your understanding as you progress through different DSA topics.
 
 # 2) Array
+- An array is a data structure that lets us hold multiple values of the same data type. 
+- Think of it as a container that holds a fixed amount of the same kind of object.
+- Python makes coding easier for programmers.
+
+## Operations in array
+In computer memory, 
+   - the address calculation for element access in an array is typically based on the index of the element and the size of each element. 
+   - The formula for calculating the memory address of an element in an array is as follows:
+```python
+Address of element = Base Address + (Index × Size of each element)
+```
+Here's a breakdown of the components:
+
+- **Base Address:** 
+  - The memory address of the first element in the array. 
+  - It serves as the starting point for the array.
+
+- **Index:** 
+  - The position of the element in the array. 
+  - It represents how far the element is from the first element.
+
+- **Size of each element:** 
+  - The number of memory units occupied by each element in the array. 
+  - This is often expressed in bytes.
+
+Let's illustrate this with a simple Python example:
+
+```python
+# Example array
+my_array = [10, 20, 30, 40, 50]
+
+# Assume the base address is 1000 (just for illustration purposes)
+base_address = 1000
+
+# Size of each element (assuming each element is an integer, which is 4 bytes in most systems)
+element_size = 4
+
+# Calculate the address of the third element (index 2)
+index = 2
+address_of_element = base_address + (index * element_size)
+
+print(f"The address of the element at index {index} is: {address_of_element}")
+```
+
+In this example, 
+   - we assume a base address of 1000 and an element size of 4 bytes. 
+   - The calculation for the address of the third element (index 2) would be:
+```python
+Address of element=1000+(2×4)=1008
+```
+This illustrates how the memory address is calculated based on the index and size of each element in the array.
+Keep in mind that actual memory management may involve more complexities, but this basic formula captures the essential 
+concept.
+
+### 1. Insertion:
+
+#### a. Append:
+```python
+my_list = [10, 20, 30, 40]
+
+# Appending an element at the end
+my_list.append(50)
+
+print(my_list)  # Output: [10, 20, 30, 40, 50]
+```
+
+#### b. Insert at a specific index:
+```python
+my_list = [10, 20, 30, 40]
+
+# Inserting an element at index 2
+my_list.insert(2, 25)
+
+print(my_list)  # Output: [10, 20, 25, 30, 40]
+```
+
+### 2. Deletion:
+
+#### a. Remove by value:
+```python
+my_list = [10, 20, 30, 40]
+
+# Removing the element with value 30
+my_list.remove(30)
+
+print(my_list)  # Output: [10, 20, 40]
+```
+
+#### b. Pop by index:
+```python
+my_list = [10, 20, 30, 40]
+
+# Popping (removing and returning) the element at index 2
+removed_element = my_list.pop(2)
+
+print(my_list)         # Output: [10, 20, 40]
+print(removed_element)  # Output: 30
+```
+
+### 3. Updating:
+
+#### a. Update by index:
+```python
+my_list = [10, 20, 30, 40]
+
+# Updating the element at index 1
+my_list[1] = 25
+
+print(my_list)  # Output: [10, 25, 30, 40]
+```
