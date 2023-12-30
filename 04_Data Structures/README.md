@@ -153,8 +153,7 @@ array1 = array('i', [10, 20, 30, 40])
 
 - If you have memory constraints, need to store a large amount of homogeneous data, and can benefit from more memory efficiency, consider the `array` module.
 
-
-## Operations in array
+### address calculation for element access
 In computer memory, 
    - the address calculation for element access in an array is typically based on the index of the element and the size of each element. 
    - The formula for calculating the memory address of an element in an array is as follows:
@@ -204,6 +203,8 @@ This illustrates how the memory address is calculated based on the index and siz
 Keep in mind that actual memory management may involve more complexities, but this basic formula captures the essential 
 concept.
 
+
+## Operations in array
 ### 1. Insertion:
 
 #### a. Append:
@@ -260,3 +261,35 @@ my_list[1] = 25
 
 print(my_list)  # Output: [10, 25, 30, 40]
 ```
+
+### Swapping elements in arrays
+- Swapping elements in a list or array in Python is a common operation, and you can achieve it in a few different ways. 
+- Here are a couple of methods:
+
+### Method 1: Using a Temporary Variable
+
+```python
+my_list = [10, 20, 30, 40]
+
+# Swapping elements at positions 1 and 2
+temp = my_list[1]
+my_list[1] = my_list[2]
+my_list[2] = temp
+
+print(my_list)  # Output: [10, 30, 20, 40]
+```
+
+### Method 2: Without Using a Temporary Variable (Using Pythonic Swap)
+
+```python
+my_list = [10, 20, 30, 40]
+
+# Swapping elements at positions 1 and 2 without using a temporary variable
+my_list[1], my_list[2] = my_list[2], my_list[1]
+
+print(my_list)  # Output: [10, 30, 20, 40]
+```
+
+Both methods achieve the same result, swapping the elements at positions 1 and 2 in the list.
+The second method is more concise and often considered more Pythonic.
+
