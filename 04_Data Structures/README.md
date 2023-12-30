@@ -293,3 +293,80 @@ print(my_list)  # Output: [10, 30, 20, 40]
 Both methods achieve the same result, swapping the elements at positions 1 and 2 in the list.
 The second method is more concise and often considered more Pythonic.
 
+# Multi- dimensional
+**2D array :**
+A 2D array, also known as a matrix, is a data structure that stores elements in a grid, 
+where each element is identified by two indices: a row index and a column index. 
+It's essentially an array of arrays, where each inner array represents a row in the matrix.
+
+Let's break down the key concepts of a 2D array:
+
+### 1. **Indexing:**
+   - Elements in a 2D array are accessed using two indices: one for the row and one for the column. 
+   - The indices start from 0.
+
+### 2. **Declaration and Initialization:**
+   - You can declare and initialize a 2D array using nested lists (lists within lists).
+
+   ```python
+   # Example of a 2D array (3x3 matrix)
+   matrix = [
+       [1, 2, 3],
+       [4, 5, 6],
+       [7, 8, 9]
+   ]
+   ```
+
+### 3. **Accessing Elements:**
+   - Accessing an element involves specifying both the row and column indices.
+
+   ```python
+   # Accessing the element in the second row and third column
+   element = matrix[1][2]  # Value: 6
+   ```
+
+### 4. **Iterating Through Elements:**
+   - You can use nested loops to iterate through all elements of the 2D array.
+
+   ```python
+   for row in matrix:
+       for element in row:
+           print(element, end=' ')
+       print()
+   ```
+
+   This would print:
+
+   ```
+   1 2 3
+   4 5 6
+   7 8 9
+   ```
+
+### 5. **Common Operations:**
+   - Common operations on 2D arrays include adding, subtracting, and multiplying matrices, as well as transposing the matrix.
+
+   ```python
+   # Transposing a matrix
+   transposed_matrix = [[row[i] for row in matrix] for i in range(len(matrix[0]))]
+   ```
+
+### Example of a 2D Array in Memory:
+
+```
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+```
+
+In memory, it might look like this:
+
+```
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+Understanding 2D arrays is essential for working with tasks that involve grids of data, such as image processing,
+game development, and certain mathematical operations.
+
