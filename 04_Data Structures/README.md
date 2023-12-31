@@ -416,12 +416,85 @@ print(reversed_array)
 my_array = [3, 8, 2, 10, 5]
 
 max_element = max(my_array)
-print(max_element)
+print(max_element) # 10
 ```
 
 **method 2:**
 ```python
 my_array = [3, 8, 2, 10, 5]
 
-max_eleme
+# Initialize with the first element
+max_element = my_array[0]
+
+for element in my_array:
+    if element > max_element:
+        max_element = element
+
+print(f"The maximum element is: {max_element}") # 10
+
+```
+
+### 2) finding minimum element
+**method 1: using `min()`**
+```python
+my_array = [3, 8, 2, 10, 5]
+
+# Using the built-in min function
+min_element = min(my_array)
+
+print(f"The minimum element is: {min_element}") # 2
+
+```
+
+**method 2:**
+```python
+my_array = [3, 8, 2, 10, 5]
+
+# Initialize with the first element
+min_element = my_array[0]
+
+for element in my_array:
+    if element < min_element:
+        min_element = element
+
+print(f"The minimum element is: {min_element}") # 2
+```
+
+## Finding the sum or average of elements
+
+```python
+my_array = [3, 8, 2, 10, 5]
+sum = 0 # here we can use sum() as well
+len_array = 0
+
+for element in my_array:
+    sum += element
+    len_array += 1
+
+average = sum/len(my_array) # using built in len()
+# or
+averageN = sum/len_array # using for loop
+
+print(sum) # sum
+print(average)  # 5.6
+print(averageN)  # 5.6
+```
+**Using function**
+```python
+def addition(arr):
+    add = 0
+    for element in arr:
+        add += element
+    return add
+
+
+def average_of_array(sum_of_array, my_array):
+    average = sum_of_array / len(my_array)
+    return average
+
+
+my_array = [3, 8, 2, 10, 5]
+sum = addition(my_array)
+average = average_of_array(sum, my_array)
+print(f"sum of an array is : {sum},\naverage of an array is {average}")
 ```
