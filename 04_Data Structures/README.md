@@ -370,3 +370,58 @@ In memory, it might look like this:
 Understanding 2D arrays is essential for working with tasks that involve grids of data, such as image processing,
 game development, and certain mathematical operations.
 
+# Manipulation
+    - 1) Reversing an array
+    - 2) Finding the maximum or minimum element
+    - 3) Finding the sum or average of element
+
+## 1) Reversing an array
+### Using Slicing:
+
+```python
+my_array = [1, 2, 3, 4, 5]
+
+# Reversing the array using slicing
+reversed_array = my_array[::-1]
+
+print(reversed_array)
+```
+
+### Using `reverse` Method:
+
+```python
+my_array = [1, 2, 3, 4, 5]
+
+# Reversing the array in-place using the reverse method
+my_array.reverse()
+
+print(my_array)
+```
+
+### Using `reversed` Function:
+
+```python
+my_array = [1, 2, 3, 4, 5]
+
+# Reversing the array using the reversed function and converting it back to a list
+reversed_array = list(reversed(my_array))
+
+print(reversed_array)
+```
+
+## 2) Finding the maximum or minimum element
+### 1) finding maximum element
+**method 1: using `max()`**
+```python
+my_array = [3, 8, 2, 10, 5]
+
+max_element = max(my_array)
+print(max_element)
+```
+
+**method 2:**
+```python
+my_array = [3, 8, 2, 10, 5]
+
+max_eleme
+```
