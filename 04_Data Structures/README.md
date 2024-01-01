@@ -121,12 +121,12 @@ Once you are comfortable with the basics, you can gradually introduce and unders
 advanced topics like dynamic programming, graph algorithms, and advanced data structures. Consistent practice, solving problems,
 and applying these concepts in coding exercises will reinforce your understanding as you progress through different DSA topics.
 
-# 2) Array
+# Array
 - An array is a data structure that lets us hold multiple values of the same data type. 
 - Think of it as a container that holds a fixed amount of the same kind of object.
 - Python makes coding easier for programmers.
 
-### In Python, you primarily have two options for working with array-like structures:
+### 1) In Python, you primarily have two options for working with array-like structures:
     - the built-in `list` type 
     - the `array` module.
 
@@ -153,7 +153,7 @@ array1 = array('i', [10, 20, 30, 40])
 
 - If you have memory constraints, need to store a large amount of homogeneous data, and can benefit from more memory efficiency, consider the `array` module.
 
-### address calculation for element access
+###  address calculation for element access
 In computer memory, 
    - the address calculation for element access in an array is typically based on the index of the element and the size of each element. 
    - The formula for calculating the memory address of an element in an array is as follows:
@@ -464,7 +464,7 @@ print(f"The minimum element is: {min_element}") # 2
 
 ```python
 my_array = [3, 8, 2, 10, 5]
-sum = 0 # here we can use sum() as well
+sum = 0 # here we can use sum(my_array) as well
 len_array = 0
 
 for element in my_array:
@@ -497,4 +497,18 @@ my_array = [3, 8, 2, 10, 5]
 sum = addition(my_array)
 average = average_of_array(sum, my_array)
 print(f"sum of an array is : {sum},\naverage of an array is {average}")
+```
+
+# Traversal
+    - Iterate through all element
+    - Differant approaches(e.g. for, while loops)
+
+1) Iterate through all elements:
+```python
+def iterate_array(arr):
+    for element in arr:
+        print(element)
+
+my_array = [3, 8, 2, 10, 5]
+iterate_array(my_array)
 ```
