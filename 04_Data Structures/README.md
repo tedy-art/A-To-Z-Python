@@ -504,11 +504,85 @@ print(f"sum of an array is : {sum},\naverage of an array is {average}")
     - Differant approaches(e.g. for, while loops)
 
 1) Iterate through all elements:
-```python
-def iterate_array(arr):
-    for element in arr:
-        print(element)
+    ```python
+    def iterate_array(arr):
+        for element in arr:
+            print(element)
 
-my_array = [3, 8, 2, 10, 5]
-iterate_array(my_array)
+    my_array = [3, 8, 2, 10, 5]
+    iterate_array(my_array)
+    ```
+
+2) Different approaches (for and while loop):
+   using `while` loop 
+   ```python
+    def iterate_array_with_while(arr):
+        index = 0
+        array_lenght = len(arr)
+        
+        while index < array_lenght:
+            print(arr[index])
+            index += 1
+    my_array = [3, 8, 2, 10, 5]
+    iterate_array_with_while(my_array)
+   ```
+
+# Subarrays:
+    - creating subarrays from existing arrays
+    - Understading slicling for specific ranges
+
+**subarrays :**
+- a subarray is a contiguous sequence of elements within an array.
+
+ex.
 ```
+Original Array = [11, 22, 55, 77, 88, 99]
+
+subarray of original array = start from and end range
+for example: index start from- 0 and end with 3
+o/p : [11, 22, 33, 55] its a sub array of [11, 22, 55, 77, 88, 99]
+
+or
+
+start with 3 and end with 5
+o/p : [77, 88, 99] its a subarray of [11, 22, 55, 77, 88, 99]
+```
+
+### 1) Creating subarrays from existing arrays:
+**method 1: using index slicing** 
+
+```python
+# Create subarrays from existing arrays:
+original_array = [3, 7, 1, 9, 2, 5, 8]
+
+start_index = 1
+end_index = 5
+subarrays = original_array[start_index: end_index+1]
+
+print("Original Arrays : ", original_array)
+print(f"subarray(from index {start_index} to {end_index}) : {subarrays}")
+```
+
+O/p:
+```
+Original Arrays :  [3, 7, 1, 9, 2, 5, 8]
+subarray(from index 1 to 5) : [7, 1, 9, 2, 5]
+```
+
+**Method 2: using range()**
+
+```python
+original_array = [11, 22, 33, 44, 55, 66, 77]
+
+subarrays_start = 0
+subarray_end = 2
+subarray = []
+
+for i in range(subarrays_start, subarray_end+1):
+    subarrays_start.append(original_array[i])
+
+print("Original array : ", original_array)
+print(f"Subarray(first three element): {subarray}")
+```
+
+### 2) Understanding slicing for specific range
