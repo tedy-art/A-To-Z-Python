@@ -49,3 +49,4 @@
 | Testing            | Unit testing, test-driven development (TDD)               |
 | Advanced Topics    | Metaclasses, context managers, decorators with arguments  |
 | External Libraries | Exploring popular libraries (e.g., NumPy, Pandas)         |
+

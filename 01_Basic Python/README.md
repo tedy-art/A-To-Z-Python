@@ -31,8 +31,8 @@ A variable in programming is used to store data.
 
 ex.
 ```python
-        a = 10
-        b = 1.1
+a = 10
+b = 1.1
 ```
 #### Rule for naming a variable:<br>
     1) a to z OR A to Z OR 0 to 9 OR _(underscore).<br>
