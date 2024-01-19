@@ -3,6 +3,8 @@ Question 2:
 Create a program that determines if a user-inputted integer is positive, negative,
 or zero.
 """
+
+
 def check_Pos_Neg_zero(num):
     if num > 0:
         return "Positive"
