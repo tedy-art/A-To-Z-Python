@@ -30,9 +30,9 @@ otherwise, print the number.
 Question 9:
 Write a script that takes a user's age as input and 
 determines whether they are a 
-child (0-12), 
-teenager (13-19), 
-adult (20-59),
+child (0–12), 
+teenager (13–19), 
+adult (20–59),
 or senior (60 and above).
 
 Question 10:
