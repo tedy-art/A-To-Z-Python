@@ -21,17 +21,13 @@ Write a Python function that calculates and returns the factorial of a given
 number using a while loop.
 
 Question 7:
-Implement a program that asks the user for a number and prints the square of 
-that number using a while loop.
-
-Question 8:
 Write a script that asks the user for a positive integer and prints the numbers 
 from 1 to that integer using a while loop.
 
-Question 9:
+Question 8:
 Create a program that prints the Fibonacci sequence up to the eighth term using a 
 while loop.
 
-Question 10:
+Question 9:
 Write a Python script that asks the user to guess a secret number between 1 and 10. 
 Keep prompting until they guess correctly.
