@@ -20,7 +20,7 @@ Implement a class Book with private attributes title and author.
 Provide methods to set and get book details.
 
 Question 6:
-Write a class TemperatureConverter with private attributes celsius and fahrenheit. 
+Write a class TemperatureConverter with private attributes Celsius and Fahrenheit. 
 Include methods to convert between Celsius and Fahrenheit.
 
 Question 7:
