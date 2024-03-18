@@ -1,0 +1,11 @@
+ProductID,ProductName,Category,Price,Stock
+101,Apple,iPhone,999,50
+102,Samsung Galaxy,Samsung,899,30
+103,Google Pixel,Google,799,20
+104,HP Laptop,Laptop,1299,15
+105,Dell Monitor,Monitor,299,25
+106,Logitech Mouse,Accessory,29,50
+107,Sony Headphones,Accessory,99,40
+108,Canon Camera,Camera,599,10
+109,Bose Speakers,Speaker,199,15
+110,Microsoft Surface,Tablet,1199,10
