@@ -7,6 +7,7 @@ based on various criteria.
 import csv
 import os
 
+
 def read_products_from_csv(filename):
     products = {}
     with open(filename, 'r', newline='') as file:
@@ -16,14 +17,18 @@ def read_products_from_csv(filename):
             products[product_id] = row
     return products
 
+
 def search_product_by_id(products, product_id):
     return products.get(product_id)
+
 
 def search_products_by_category(products, category):
     return [product for product in products.values() if product['Category'] == category]
 
+
 def search_products_by_price_range(products, min_price, max_price):
     return [product for product in products.values() if min_price <= float(product['Price']) <= max_price]
+
 
 # Get the absolute path of the CSV file
 current_directory = os.path.dirname(__file__)
