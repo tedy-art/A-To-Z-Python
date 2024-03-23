@@ -22,4 +22,3 @@ print(o1.taste())
 
 o2 = Orange()
 print(o2.taste())
-print('New Changes')
