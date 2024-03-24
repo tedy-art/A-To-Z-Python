@@ -285,7 +285,7 @@ Balance : 2000
 Enter choice : 6
 
 ```
-4) Pillars of OOPS
+**4) Pillars of OOPS :**
    1) encapsulation
    2) abstraction
    3) inheritance
