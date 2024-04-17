@@ -650,12 +650,12 @@ Output:
 
 Example
 ```python
-thislist = ['apple', 'banana', 'cherry', 'apple', 'banana']
+thislist = ['apple', 'banana', 45.2, 'cherry', 'apple', 'banana', 12]
 print(thislist)
 ```
 Output:
 ```output
-['apple', 'banana', 'cherry', 'apple', 'banana']
+['apple', 'banana', 45.2, 'cherry', 'apple', 'banana', 12]
 ```
 
 #### How `len()` work with a list??
@@ -1752,7 +1752,13 @@ Output
 Ford
 ```
 
-#### Duplicates Aren't Allowed
+#### builds a dictionaries direct from sequences of key-value paires:
+```python
+tel = dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])
+print(tel)
+```
+
+#### Duplicate keys Aren't Allowed
 - Dictionaries cannot have two items with the same key:
 ```python
 thisdict = {
@@ -1766,6 +1772,51 @@ print(thisdict)
 Output
 ```python
 {'brand': 'Ford', 'model': 'Mustang', 'year': 2020}
+```
+
+### Add Dictionary Items
+```python
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict["color"] = "red"
+print(thisdict)
+```
+output
+```python
+{'brand': 'Ford', 'model': 'Mustang', 'year': 1964, 'color': 'red'}
+```
+Ex2:
+```python
+tel = {'jack': 4098, 'sape': 4139}
+items = tel['guido'] = 4127
+print(tel)
+```
+Output:
+```python
+{'jack': 4098, 'sape': 4139, 'guido': 4127}
+```
+
+#### Dictionary Comprehensions:
+```python
+numbers_dict = {x: x**2 for x in (2, 4, 6)}
+print(number_dict)
+```
+output
+```python
+{2: 4, 4: 16, 6: 36}
+```
+
+#### When keys are simple string it is sometime easiar to specify pairs using keyword:
+```python
+tel = dict(sape=4139, guido=4127, jack=4098)
+print(tel)
+```
+output
+```python
+{'sape': 4139, 'guido': 4127, 'jack': 4098}
 ```
 
 #### Dictionary Length
@@ -1905,21 +1956,6 @@ print(thisdict)
 ```python
 {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
 {'brand': 'Ford', 'model': 'Mustang', 'year': 2020}
-```
-
-### Add Dictionary Items
-```python
-thisdict = {
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-}
-thisdict["color"] = "red"
-print(thisdict)
-```
-output
-```python
-{'brand': 'Ford', 'model': 'Mustang', 'year': 1964, 'color': 'red'}
 ```
 
 #### Update Dictionary by `update()`:
@@ -2161,6 +2197,7 @@ output
 {'child1': {'name': 'Emil', 'year': 2004}, 'child2': {'name': 'Tobias', 'year': 2007}, 'child3': {'name': 'Linus', 'year': 2011}}
 Tobias
 ```
+
 
 # 4. set {}:
 - sets are used to store multiple items in a single variable.
