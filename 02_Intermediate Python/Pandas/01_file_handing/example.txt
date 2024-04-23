@@ -1,1 +1,1 @@
-Hey!!! WelcomeHere is an example of file handling..
+Hey!!! WelcomeHere is an example of file handling..Inserting data to demonstrate append mode example.
