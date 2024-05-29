@@ -35,9 +35,9 @@ a = 10
 b = 1.1
 ```
 #### Rule for naming a variable:<br>
-    1) a to z OR A to Z OR 0 to 9 OR _(underscore).<br>
-    2) you can't start a variable name with a digit.<br>
-    3) use underscore if you want to create a variable name having two or more words.<br>
+    1) a to z OR A to Z OR 0 to 9 OR _(underscore).
+    2) you can't start a variable name with a digit.
+    3) use underscore if you want to create a variable name having two or more words.
 
 #### Good name for a variable:<br>
     number, salary, name, first_name, last_name, email, number1 .... more<br>
