@@ -25,6 +25,26 @@ It is used in:<br>
 3) academic research.<br>
 4) automation and many more.<br>
 
+# Syntax
+Basic Python syntax:
+```python
+print("hello world!")
+```
+o/p
+```python
+hello World!
+```
+
+Basic Java Syntax:
+ex.
+```java
+public class Main {
+  public static void main(String[] args) {
+    System.out.println("Hello World");
+  }
+}
+```
+
 # Variables, Data Types and type conversion
 ## variables:<br>
 A variable in programming is used to store data.
@@ -70,15 +90,6 @@ There are more complex data types and are derived from primitiv data types.
 | 4) | Dictionary Data types | Unordered collection of key-value pairs.                                                                        | my_dict = {'name': 'John', 'age': 25} |
 | 5) | String Data type      | Strings, while primitive, can also be considered non-primitive when they are treated as sequences of characters | x = "This is String"                  |
 
-### First python program :
-ex.
-```python
-print("Hello, World!")
-```
-#### Output :
-```python    
-    'Hello, World!'
-```
 #### Ex.
 ```python
     name = "Jack"
